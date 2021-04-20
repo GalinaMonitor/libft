@@ -1,7 +1,9 @@
-ft_memcpy(void *dest, const void *src, size_t nmb)
+ft_memccpy(void *dest, const void *src, int c, size_t nmb)
 {
 	while (nmb > 0)
 	{
+		if (*src = c)
+			return (NULL);
 		*dest = *src;
 		dest++;
 		src++;
