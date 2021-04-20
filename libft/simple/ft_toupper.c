@@ -1,3 +1,5 @@
+#include "libft.h"
+
 char	*ft_tolower(char *str)
 {
 	int ind;

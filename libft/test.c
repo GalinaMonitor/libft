@@ -1,4 +1,4 @@
-#inclide <inistd.h>
+#include "libft.h"
 
 int main()
 {

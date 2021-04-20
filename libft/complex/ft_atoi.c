@@ -1,4 +1,6 @@
-int	ft_atoi(char *str)
+#include "libft.h"
+
+int	ft_atoi(const char *str)
 {
 	int nbr;
 	int min;
