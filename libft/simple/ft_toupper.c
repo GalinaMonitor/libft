@@ -1,6 +1,6 @@
 #include "libft.h"
 
-char	*ft_tolower(char *str)
+char	*ft_toupper(char *str)
 {
 	int ind;
 

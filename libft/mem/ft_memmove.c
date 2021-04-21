@@ -1,6 +1,6 @@
 #include "libft.h"
 
-void	*memmove(void* dest, const void* src, size_t nmb)
+void	*ft_memmove(void* dest, const void* src, size_t nmb)
 {
 	nmb--;
 	if (src > dest)
