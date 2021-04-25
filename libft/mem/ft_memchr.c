@@ -1,6 +1,6 @@
 #include "libft.h"
 
-void	*ft_memchr(void* src, int c, size_t nmb)
+void	*ft_memchr(void *src, int c, size_t nmb)
 {
 	while (nmb > 0)
 	{
