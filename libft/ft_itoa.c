@@ -1,6 +1,6 @@
 #include "libft.h"
 
-int		static ft_intlen(int n)
+static int	ft_intlen(int n)
 {
 	int count;
 
@@ -13,12 +13,12 @@ int		static ft_intlen(int n)
 	return (count);
 }
 
-void	static *ft_translate(char *word, int count)
+static void	ft_translate(char *word, int count)
 {
 	if (*word == '-')
 		word++;
 	word+= count;
-	word = '\0';
+	*word = '\0';
 	word--;
 	while (count > 0)
 	{

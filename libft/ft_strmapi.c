@@ -7,7 +7,7 @@ char	*ft_strmapi(char const *s, char (*f)(size_t, char))
 
 	ind = 0;
 	result = NULL;
-	if (s && f && result = ft_strnew(ft_strlen(s)))
+	if (s && f && (result = ft_strnew(ft_strlen(s))))
 	{
 		while (s[ind])
 		{

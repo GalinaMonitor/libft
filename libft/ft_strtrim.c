@@ -34,7 +34,7 @@ char *ft_strtrim(char const *s1, char const *set)
 			else
 				set++;
 		}
-		if (count = 0)
+		if (count == 0)
 			*result = *set;
 		s1++;
 		count = 0;
