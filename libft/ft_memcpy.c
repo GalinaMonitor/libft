@@ -2,12 +2,16 @@
 
 void	*ft_memcpy(void *dest, const void *src, size_t nmb)
 {
-	nmb--;
-	while (nmb > 0 && *((unsigned char *)src))
+	unsigned char *dest_cast;
+	unsigned char *src_cast;
+
+	dest_cast = (unsigned char *)dest;
+	src_cast = (unsigned char *)src;
+	while (nmb > 0 && src != dest)
 	{
-		*((unsigned char *)dest) = *((unsigned char *)src);
-		dest++;
-		src++;
+		*dest_cast = *src_cast;
+		dest_cast++;
+		src_cast++;
 		nmb--;
 	}
 	return (dest);

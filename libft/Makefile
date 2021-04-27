@@ -44,6 +44,9 @@ SOURCES_LIST = ft_memset.c\
 	ft_toupper.c\
 	ft_tolower.c\
 	ft_isspace.c\
+	ft_substr.c\
+	ft_calloc.c\
+	ft_split.c\
 
 SOURCES = $(addprefix $(SOURCES_DIRECTORY), $(SOURCES_LIST))
 OBJECTS_DIRECTORY = objects/

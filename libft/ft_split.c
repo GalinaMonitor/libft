@@ -45,14 +45,13 @@ int		static ft_words_count(char const *s, char c)
 char	**ft_split(char const *s, char c)
 {
 	int words;
-	int count;
 	int ind;
 	int word_size;
 	char **mass;
 
 	ind = 0;
-	count = ft_words_count(s, c);
-	mass = (char *)malloc(sizeof(char *) * count + 1);
+	words = ft_words_count(s, c);
+	mass = (char **)malloc(sizeof(char *) * words + 1);
 	while (words > 0)
 	{
 		word_size = ft_char_count(s, c) + 1;

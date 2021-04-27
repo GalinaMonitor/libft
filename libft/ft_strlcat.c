@@ -1,4 +1,5 @@
 #include "libft.h"
+#include <string.h>
 
 size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
@@ -10,6 +11,6 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	dest = ft_memchr(dest, '\0', size);
 	if (dest == NULL)
 		return(size + len_src);
-	ft_strlcpy(dest, src, size - len_dest);
+	ft_strlcpy(dest, src, size - len_dest - 1);
 	return (len_src + len_dest);
 }

@@ -5,8 +5,10 @@ char	*ft_strdup(const char *s)
 	size_t size;
 	char *str;
 
-	size = ft_strlen(s) + 1;
-	str = (char *)malloc(sizeof(char) * size);
+	size = ft_strlen(s);
+	str = ft_strnew(size);
+	if (str == NULL)
+		return (NULL);
 	ft_strlcpy(str, s, size);
 	return (str);
 }
