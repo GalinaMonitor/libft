@@ -1,10 +1,12 @@
 #include "libft.h"
 
-static int	ft_intlen(int n)
+static int	ft_intlen(long n)
 {
 	int count;
 
-	count = 1;
+	count = 0;
+	if (n < 0)
+		n*= -1;
 	while (n > 0)
 	{
 		n/= 10;
@@ -13,37 +15,43 @@ static int	ft_intlen(int n)
 	return (count);
 }
 
-static void	ft_translate(char *word, int count)
+char	*ft_itoa(int nbr)
 {
-	if (*word == '-')
-		word++;
-	word+= count - 1;
-	while (count > 0)
-	{
-		*word = count % 10 + 48;
-		count/= 10;
-		if (count == 0)
-			return;
-		word--;
-	}
-}
-
-char	*ft_itoa(int n)
-{
+	long n;
+	int ind;
 	int count;
 	char *word;
 
+	n = (long)nbr;
+	ind = 0;
 	count = ft_intlen(n);
 	word = ft_strnew(count + 1);
+	if (word == NULL)
+		return (NULL);
+	ind+= count - 1;
 	if (n < 0)
-		*word = '-';
-	if (n == 0)
 	{
-		*word = '0';
+		word[0] = '-';
+		n*= -1;
+		ind++;
+	}
+	if (count == 0)
+	{
+		word[0] = '0';
 		return (word);
 	}
-
-	ft_translate(word, count);
+	while (n > 0)
+	{
+		word[ind] = n % 10 + 48;
+		n/= 10;
+		ind--;
+	}
 	return (word);
 }
 
+int main ()
+{
+	char *check = ft_itoa(-2147483648);
+	printf("%s\n", check);
+	return 0;
+}

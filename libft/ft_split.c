@@ -20,9 +20,9 @@ static	int ft_words_count(char const *s, char c)
 	count = 0;
 	while(*s)
 	{
-		if (*s == c)
+		if (*s != c)
 		{
-			while (*s == c)
+			while (*s != c && *s)
 				s++;
 			count++;
 		}
@@ -43,12 +43,14 @@ char	**ft_split(char const *s, char c)
 	ind = 0;
 	words = ft_words_count(s, c);
 	mass = (char **)malloc(sizeof(char *) * words + 1);
-	while (words > 0)
+	if (mass == NULL)
+		return (NULL);
+	while (words > 1)
 	{
 		if (*s == c)
 			while (*s == c)
 				s++;
-		word_size = ft_char_count(s, c) + 1;
+		word_size = ft_char_count(s, c);
 		mass[ind] = ft_strnew(word_size);
 		if (mass[ind] == NULL)
 			return (NULL);
