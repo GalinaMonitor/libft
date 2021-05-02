@@ -1,0 +1,1439 @@
+= Host-specific information ====================================================
+$> hostname; uname -msr
+oa-m3.msk.21-school.ru
+Darwin 18.7.0 x86_64
+$> date
+Sun May  2 20:47:13 MSK 2021
+$> gcc --version
+Apple clang version 11.0.0 (clang-1100.0.33.17)
+Target: x86_64-apple-darwin18.7.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+$> clang --version
+Apple clang version 11.0.0 (clang-1100.0.33.17)
+Target: x86_64-apple-darwin18.7.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+
+= libft.h=======================================================================
+$> norminette libft.h | grep -E '(Error|Warning)'
+/Users/gmonitor/Documents/school21/libft-war-machine-master/dirlibft/libft.h: Error!
+Error: SPC_AFTER_POINTER    (line:  19, col:  24):	space after pointer
+Error: SPACE_REPLACE_TAB    (line:  20, col:   4):	Found space when expecting tab
+Error: SPC_AFTER_POINTER    (line:  23, col:  25):	space after pointer
+Error: SPC_AFTER_POINTER    (line:  23, col:  43):	space after pointer
+Norme check failed
+
+= Compiling libft ==============================================================
+$> make re
+rm -f  ft_memset.o  ft_bzero.o  ft_memcpy.o  ft_memccpy.o  ft_memmove.o  ft_memchr.o  ft_memcmp.o  ft_strlen.o  ft_strdup.o  ft_strlcat.o  ft_strchr.o  ft_strrchr.o  ft_strnstr.o  ft_strncmp.o  ft_atoi.o  ft_isalpha.o  ft_isdigit.o  ft_isalnum.o  ft_isascii.o  ft_isprint.o  ft_toupper.o  ft_tolower.o  ft_memalloc.o  ft_strnew.o  ft_strmapi.o  ft_strjoin.o  ft_strtrim.o  ft_split.o  ft_itoa.o  ft_putchar_fd.o  ft_putstr_fd.o  ft_putendl_fd.o  ft_putnbr_fd.o  ft_toupper.o  ft_tolower.o  ft_isspace.o  ft_memset.d  ft_bzero.d  ft_memcpy.d  ft_memccpy.d  ft_memmove.d  ft_memchr.d  ft_memcmp.d  ft_strlen.d  ft_strdup.d  ft_strlcat.d  ft_strchr.d  ft_strrchr.d  ft_strnstr.d  ft_strncmp.d  ft_atoi.d  ft_isalpha.d  ft_isdigit.d  ft_isalnum.d  ft_isascii.d  ft_isprint.d  ft_toupper.d  ft_tolower.d  ft_memalloc.d  ft_strnew.d  ft_strmapi.d  ft_strjoin.d  ft_strtrim.d  ft_split.d  ft_itoa.d  ft_putchar_fd.d  ft_putstr_fd.d  ft_putendl_fd.d  ft_putnbr_fd.d  ft_toupper.d  ft_tolower.d  ft_isspace.d
+rm -f libft.a
+gcc -Wall -Werror -Wextra -O2 -c ft_memset.c -o ft_memset.o -MD
+gcc -Wall -Werror -Wextra -O2 -c ft_bzero.c -o ft_bzero.o -MD
+gcc -Wall -Werror -Wextra -O2 -c ft_memcpy.c -o ft_memcpy.o -MD
+gcc -Wall -Werror -Wextra -O2 -c ft_memccpy.c -o ft_memccpy.o -MD
+gcc -Wall -Werror -Wextra -O2 -c ft_memmove.c -o ft_memmove.o -MD
+gcc -Wall -Werror -Wextra -O2 -c ft_memchr.c -o ft_memchr.o -MD
+gcc -Wall -Werror -Wextra -O2 -c ft_memcmp.c -o ft_memcmp.o -MD
+gcc -Wall -Werror -Wextra -O2 -c ft_strlen.c -o ft_strlen.o -MD
+gcc -Wall -Werror -Wextra -O2 -c ft_strdup.c -o ft_strdup.o -MD
+gcc -Wall -Werror -Wextra -O2 -c ft_strlcat.c -o ft_strlcat.o -MD
+gcc -Wall -Werror -Wextra -O2 -c ft_strchr.c -o ft_strchr.o -MD
+gcc -Wall -Werror -Wextra -O2 -c ft_strrchr.c -o ft_strrchr.o -MD
+gcc -Wall -Werror -Wextra -O2 -c ft_strnstr.c -o ft_strnstr.o -MD
+gcc -Wall -Werror -Wextra -O2 -c ft_strncmp.c -o ft_strncmp.o -MD
+gcc -Wall -Werror -Wextra -O2 -c ft_atoi.c -o ft_atoi.o -MD
+gcc -Wall -Werror -Wextra -O2 -c ft_isalpha.c -o ft_isalpha.o -MD
+gcc -Wall -Werror -Wextra -O2 -c ft_isdigit.c -o ft_isdigit.o -MD
+gcc -Wall -Werror -Wextra -O2 -c ft_isalnum.c -o ft_isalnum.o -MD
+gcc -Wall -Werror -Wextra -O2 -c ft_isascii.c -o ft_isascii.o -MD
+gcc -Wall -Werror -Wextra -O2 -c ft_isprint.c -o ft_isprint.o -MD
+gcc -Wall -Werror -Wextra -O2 -c ft_toupper.c -o ft_toupper.o -MD
+gcc -Wall -Werror -Wextra -O2 -c ft_tolower.c -o ft_tolower.o -MD
+gcc -Wall -Werror -Wextra -O2 -c ft_memalloc.c -o ft_memalloc.o -MD
+gcc -Wall -Werror -Wextra -O2 -c ft_strnew.c -o ft_strnew.o -MD
+gcc -Wall -Werror -Wextra -O2 -c ft_strmapi.c -o ft_strmapi.o -MD
+gcc -Wall -Werror -Wextra -O2 -c ft_strjoin.c -o ft_strjoin.o -MD
+gcc -Wall -Werror -Wextra -O2 -c ft_strtrim.c -o ft_strtrim.o -MD
+gcc -Wall -Werror -Wextra -O2 -c ft_split.c -o ft_split.o -MD
+gcc -Wall -Werror -Wextra -O2 -c ft_itoa.c -o ft_itoa.o -MD
+gcc -Wall -Werror -Wextra -O2 -c ft_putchar_fd.c -o ft_putchar_fd.o -MD
+gcc -Wall -Werror -Wextra -O2 -c ft_putstr_fd.c -o ft_putstr_fd.o -MD
+gcc -Wall -Werror -Wextra -O2 -c ft_putendl_fd.c -o ft_putendl_fd.o -MD
+gcc -Wall -Werror -Wextra -O2 -c ft_putnbr_fd.c -o ft_putnbr_fd.o -MD
+gcc -Wall -Werror -Wextra -O2 -c ft_isspace.c -o ft_isspace.o -MD
+ar rcs libft.a ft_memset.o ft_bzero.o ft_memcpy.o ft_memccpy.o ft_memmove.o ft_memchr.o ft_memcmp.o ft_strlen.o ft_strdup.o ft_strlcat.o ft_strchr.o ft_strrchr.o ft_strnstr.o ft_strncmp.o ft_atoi.o ft_isalpha.o ft_isdigit.o ft_isalnum.o ft_isascii.o ft_isprint.o ft_toupper.o ft_tolower.o ft_memalloc.o ft_strnew.o ft_strmapi.o ft_strjoin.o ft_strtrim.o ft_split.o ft_itoa.o ft_putchar_fd.o ft_putstr_fd.o ft_putendl_fd.o ft_putnbr_fd.o ft_isspace.o
+
+$> make bonus
+make: *** No rule to make target `bonus'.  Stop.
+
+$> ls -la libft.a
+-rw-r--r--  1 gmonitor  4221  29192 May  2 20:47 /Users/gmonitor/Documents/school21/libft-war-machine-master/dirlibft/libft.a
+
+= Part1_functions ==============================================================
+
+= ft_memset.c ==================================================================
+$> norminette ft_memset.c | grep -E '(Error|Warning)'
+../libft/ft_memset.c: Error!
+Error: SPACE_REPLACE_TAB    (line:   5, col:  18):	Found space when expecting tab
+Error: SPACE_AFTER_KW       (line:   8, col:   5):	Missing space after keyword
+Error: SPC_BFR_PAR          (line:   8, col:  10):	Missing space before parenthesis (brace/bracket)
+Error: SPACE_AFTER_KW       (line:  14, col:   5):	Missing space after keyword
+Error: SPC_BFR_PAR          (line:  14, col:  11):	Missing space before parenthesis (brace/bracket)
+Norme check failed
+$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_memset.c main.c libft.a -o user_exe
+
+= Test 1 ===================================================
+$> ./user_exe 01
+$> diff -U 3 user_output_test01 test01.output
+
+Diff OK :D
+= Test 2 ===================================================
+$> ./user_exe 02
+$> diff -U 3 user_output_test02 test02.output
+
+Diff OK :D
+= Test 3 ===================================================
+$> ./user_exe 03
+$> diff -U 3 user_output_test03 test03.output
+
+Diff OK :D
+= Test 4 ===================================================
+$> ./user_exe 04
+$> diff -U 3 user_output_test04 test04.output
+
+Diff OK :D
+
+= ft_bzero.c ===================================================================
+$> norminette ft_bzero.c | grep -E '(Error|Warning)'
+../libft/ft_bzero.c: Error!
+Error: SPACE_REPLACE_TAB    (line:   5, col:  18):	Found space when expecting tab
+Error: SPACE_AFTER_KW       (line:   8, col:   5):	Missing space after keyword
+Error: SPC_BFR_PAR          (line:   8, col:  10):	Missing space before parenthesis (brace/bracket)
+Norme check failed
+$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_bzero.c main.c libft.a -o user_exe
+
+= Test 1 ===================================================
+$> ./user_exe 01
+$> diff -U 3 user_output_test01 test01.output
+
+Diff OK :D
+= Test 2 ===================================================
+$> ./user_exe 02
+$> diff -U 3 user_output_test02 test02.output
+
+Diff OK :D
+
+= ft_calloc.c ==================================================================
+$> norminette ft_calloc.c | grep -E '(Error|Warning)'
+../libft/ft_calloc.c: Error!
+Error: SPACE_REPLACE_TAB    (line:   5, col:   9):	Found space when expecting tab
+Error: SPACE_AFTER_KW       (line:  10, col:   5):	Missing space after keyword
+Error: SPC_BFR_PAR          (line:  10, col:  11):	Missing space before parenthesis (brace/bracket)
+Norme check failed
+$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_calloc.c main.c libft.a -o user_exe
+
+= Test 1 ===================================================
+$> ./user_exe 01
+$> diff -U 3 user_output_test01 test01.output
+
+Diff OK :D
+
+= ft_memcpy.c ==================================================================
+$> norminette ft_memcpy.c | grep -E '(Error|Warning)'
+../libft/ft_memcpy.c: Error!
+Error: SPACE_REPLACE_TAB    (line:   5, col:  18):	Found space when expecting tab
+Error: SPACE_REPLACE_TAB    (line:   6, col:  18):	Found space when expecting tab
+Norme check failed
+$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_memcpy.c main.c libft.a -o user_exe
+
+= Test 1 ===================================================
+$> ./user_exe 01
+$> diff -U 3 user_output_test01 test01.output
+
+Diff OK :D
+= Test 2 ===================================================
+$> ./user_exe 02
+$> diff -U 3 user_output_test02 test02.output
+
+Diff OK :D
+= Test 3 ===================================================
+$> ./user_exe 03
+$> diff -U 3 user_output_test03 test03.output
+
+Diff OK :D
+
+= ft_memccpy.c =================================================================
+$> norminette ft_memccpy.c | grep -E '(Error|Warning)'
+../libft/ft_memccpy.c: Error!
+Error: SPACE_REPLACE_TAB    (line:   5, col:  18):	Found space when expecting tab
+Error: SPACE_REPLACE_TAB    (line:   6, col:  18):	Found space when expecting tab
+Norme check failed
+$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_memccpy.c main.c libft.a -o user_exe
+
+= Test 1 ===================================================
+$> ./user_exe 01
+$> diff -U 3 user_output_test01 test01.output
+
+Diff OK :D
+= Test 2 ===================================================
+$> ./user_exe 02
+$> diff -U 3 user_output_test02 test02.output
+
+Diff OK :D
+= Test 3 ===================================================
+$> ./user_exe 03
+$> diff -U 3 user_output_test03 test03.output
+
+Diff OK :D
+= Test 4 ===================================================
+$> ./user_exe 04
+$> diff -U 3 user_output_test04 test04.output
+
+Diff OK :D
+
+= ft_memmove.c =================================================================
+$> norminette ft_memmove.c | grep -E '(Error|Warning)'
+../libft/ft_memmove.c: Error!
+Error: SPC_AFTER_POINTER    (line:   3, col:  25):	space after pointer
+Error: SPC_AFTER_POINTER    (line:   3, col:  43):	space after pointer
+Error: SPACE_REPLACE_TAB    (line:   5, col:  18):	Found space when expecting tab
+Error: SPACE_REPLACE_TAB    (line:   6, col:  18):	Found space when expecting tab
+Error: SPC_BFR_OPERATOR     (line:  22, col:  17):	missing space before operator
+Error: SPC_BFR_OPERATOR     (line:  23, col:  18):	missing space before operator
+Error: TOO_MANY_LINES       (line:  33, col:   1):	Function has more than 25 lines
+Norme check failed
+$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_memmove.c main.c libft.a -o user_exe
+
+= Test 1 ===================================================
+$> ./user_exe 01
+$> diff -U 3 user_output_test01 test01.output
+
+Diff OK :D
+= Test 2 ===================================================
+$> ./user_exe 02
+$> diff -U 3 user_output_test02 test02.output
+
+Diff OK :D
+= Test 3 ===================================================
+$> ./user_exe 03
+$> diff -U 3 user_output_test03 test03.output
+
+Diff OK :D
+= Test 4 ===================================================
+$> ./user_exe 04
+$> diff -U 3 user_output_test04 test04.output
+
+Diff OK :D
+= Test 5 ===================================================
+$> ./user_exe 05
+$> diff -U 3 user_output_test05 test05.output
+
+Diff OK :D
+
+= ft_memchr.c ==================================================================
+$> norminette ft_memchr.c | grep -E '(Error|Warning)'
+../libft/ft_memchr.c: Error!
+Error: SPACE_REPLACE_TAB    (line:   5, col:  18):	Found space when expecting tab
+Norme check failed
+$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_memchr.c main.c libft.a -o user_exe
+
+= Test 1 ===================================================
+$> ./user_exe 01
+$> diff -U 3 user_output_test01 test01.output
+
+Diff OK :D
+= Test 2 ===================================================
+$> ./user_exe 02
+$> diff -U 3 user_output_test02 test02.output
+
+Diff OK :D
+= Test 3 ===================================================
+$> ./user_exe 03
+$> diff -U 3 user_output_test03 test03.output
+
+Diff OK :D
+= Test 4 ===================================================
+$> ./user_exe 04
+$> diff -U 3 user_output_test04 test04.output
+
+Diff OK :D
+= Test 5 ===================================================
+$> ./user_exe 05
+$> diff -U 3 user_output_test05 test05.output
+
+Diff OK :D
+= Test 6 ===================================================
+$> ./user_exe 06
+$> diff -U 3 user_output_test06 test06.output
+
+Diff OK :D
+
+= ft_memcmp.c ==================================================================
+$> norminette ft_memcmp.c | grep -E '(Error|Warning)'
+$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_memcmp.c main.c libft.a -o user_exe
+
+= Test 1 ===================================================
+$> ./user_exe 01
+$> diff -U 3 user_output_test01 test01.output
+
+Diff OK :D
+= Test 2 ===================================================
+$> ./user_exe 02
+$> diff -U 3 user_output_test02 test02.output
+--- /Users/gmonitor/Documents/school21/libft-war-machine-master/tests/Part1_functions/ft_memcmp/user_output_test02	2021-05-02 20:47:22.000000000 +0300$
++++ /Users/gmonitor/Documents/school21/libft-war-machine-master/tests/Part1_functions/ft_memcmp/test02.output	2021-02-26 16:47:06.000000000 +0300$
+@@ -1 +1 @@$
+-0$
+\ No newline at end of file$
++1$
+\ No newline at end of file$
+
+Diff KO :(
+= Test 3 ===================================================
+$> ./user_exe 03
+$> diff -U 3 user_output_test03 test03.output
+--- /Users/gmonitor/Documents/school21/libft-war-machine-master/tests/Part1_functions/ft_memcmp/user_output_test03	2021-05-02 20:47:22.000000000 +0300$
++++ /Users/gmonitor/Documents/school21/libft-war-machine-master/tests/Part1_functions/ft_memcmp/test03.output	2021-02-26 16:47:06.000000000 +0300$
+@@ -1 +1 @@$
+-0$
+\ No newline at end of file$
++1$
+\ No newline at end of file$
+
+Diff KO :(
+= Test 4 ===================================================
+$> ./user_exe 04
+$> diff -U 3 user_output_test04 test04.output
+
+Diff OK :D
+= Test 5 ===================================================
+$> ./user_exe 05
+$> diff -U 3 user_output_test05 test05.output
+
+Diff OK :D
+= Test 6 ===================================================
+$> ./user_exe 06
+$> diff -U 3 user_output_test06 test06.output
+
+Diff OK :D
+= Test 7 ===================================================
+$> ./user_exe 07
+$> diff -U 3 user_output_test07 test07.output
+
+Diff OK :D
+= Test 8 ===================================================
+$> ./user_exe 08
+$> diff -U 3 user_output_test08 test08.output
+
+Diff OK :D
+= Test 9 ===================================================
+$> ./user_exe 09
+$> diff -U 3 user_output_test09 test09.output
+--- /Users/gmonitor/Documents/school21/libft-war-machine-master/tests/Part1_functions/ft_memcmp/user_output_test09	2021-05-02 20:47:22.000000000 +0300$
++++ /Users/gmonitor/Documents/school21/libft-war-machine-master/tests/Part1_functions/ft_memcmp/test09.output	2021-02-26 16:47:06.000000000 +0300$
+@@ -1 +1 @@$
+-1$
+\ No newline at end of file$
++0$
+\ No newline at end of file$
+
+Diff KO :(
+
+= ft_strlen.c ==================================================================
+$> norminette ft_strlen.c | grep -E '(Error|Warning)'
+../libft/ft_strlen.c: Error!
+Error: SPACE_REPLACE_TAB    (line:   5, col:  11):	Found space when expecting tab
+Norme check failed
+$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_strlen.c main.c libft.a -o user_exe
+
+= Test 1 ===================================================
+$> ./user_exe 01
+$> diff -U 3 user_output_test01 test01.output
+
+Diff OK :D
+= Test 2 ===================================================
+$> ./user_exe 02
+$> diff -U 3 user_output_test02 test02.output
+
+Diff OK :D
+= Test 3 ===================================================
+$> ./user_exe 03
+$> diff -U 3 user_output_test03 test03.output
+
+Diff OK :D
+= Test 4 ===================================================
+$> ./user_exe 04
+$> diff -U 3 user_output_test04 test04.output
+
+Diff OK :D
+= Test 5 ===================================================
+$> ./user_exe 05
+$> diff -U 3 user_output_test05 test05.output
+
+Diff OK :D
+= Test 6 ===================================================
+$> ./user_exe 06
+$> diff -U 3 user_output_test06 test06.output
+
+Diff OK :D
+
+= ft_strdup.c ==================================================================
+$> norminette ft_strdup.c | grep -E '(Error|Warning)'
+../libft/ft_strdup.c: Error!
+Error: SPACE_REPLACE_TAB    (line:   5, col:  11):	Found space when expecting tab
+Error: SPACE_REPLACE_TAB    (line:   6, col:   9):	Found space when expecting tab
+Error: MISALIGNED_VAR_DECL  (line:   6, col:  10):	Misaligned variable declaration
+Norme check failed
+$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_strdup.c main.c libft.a -o user_exe
+
+Undefined symbols for architecture x86_64:
+  "_ft_strlcpy", referenced from:
+      _ft_strdup in ft_strdup-8b2bdc.o
+ld: symbol(s) not found for architecture x86_64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+
+= ft_strlcat.c =================================================================
+$> norminette ft_strlcat.c | grep -E '(Error|Warning)'
+../libft/ft_strlcat.c: Error!
+Error: SPACE_REPLACE_TAB    (line:   6, col:  11):	Found space when expecting tab
+Error: SPACE_REPLACE_TAB    (line:   7, col:  11):	Found space when expecting tab
+Error: SPACE_AFTER_KW       (line:  13, col:   9):	Missing space after keyword
+Error: SPC_BFR_PAR          (line:  13, col:  15):	Missing space before parenthesis (brace/bracket)
+Norme check failed
+$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_strlcat.c main.c libft.a -o user_exe
+
+Undefined symbols for architecture x86_64:
+  "_ft_strlcpy", referenced from:
+      _ft_strlcat in ft_strlcat-9527a8.o
+ld: symbol(s) not found for architecture x86_64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+
+= ft_strlcpy.c =================================================================
+$> norminette ft_strlcpy.c | grep -E '(Error|Warning)'
+../libft/ft_strlcpy.c: Error!
+Error: SPACE_REPLACE_TAB    (line:   5, col:  11):	Found space when expecting tab
+Norme check failed
+$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_strlcpy.c main.c libft.a -o user_exe
+
+= Test 1 ===================================================
+$> ./user_exe 01
+$> diff -U 3 user_output_test01 test01.output
+
+Diff OK :D
+= Test 2 ===================================================
+$> ./user_exe 02
+$> diff -U 3 user_output_test02 test02.output
+
+Diff OK :D
+= Test 3 ===================================================
+$> ./user_exe 03
+$> diff -U 3 user_output_test03 test03.output
+
+Diff OK :D
+= Test 4 ===================================================
+$> ./user_exe 04
+$> diff -U 3 user_output_test04 test04.output
+
+Diff OK :D
+= Test 5 ===================================================
+$> ./user_exe 05
+$> diff -U 3 user_output_test05 test05.output
+
+Diff OK :D
+
+= ft_strchr.c ==================================================================
+$> norminette ft_strchr.c | grep -E '(Error|Warning)'
+../libft/ft_strchr.c: Error!
+Error: SPACE_REPLACE_TAB    (line:   5, col:   9):	Found space when expecting tab
+Norme check failed
+$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_strchr.c main.c libft.a -o user_exe
+
+= Test 1 ===================================================
+$> ./user_exe 01
+$> diff -U 3 user_output_test01 test01.output
+
+Diff OK :D
+= Test 2 ===================================================
+$> ./user_exe 02
+$> diff -U 3 user_output_test02 test02.output
+
+Diff OK :D
+= Test 3 ===================================================
+$> ./user_exe 03
+$> diff -U 3 user_output_test03 test03.output
+
+Diff OK :D
+= Test 4 ===================================================
+$> ./user_exe 04
+$> diff -U 3 user_output_test04 test04.output
+
+Diff OK :D
+= Test 5 ===================================================
+$> ./user_exe 05
+$> diff -U 3 user_output_test05 test05.output
+
+Diff OK :D
+= Test 6 ===================================================
+$> ./user_exe 06
+$> diff -U 3 user_output_test06 test06.output
+
+Diff OK :D
+
+= ft_strrchr.c =================================================================
+$> norminette ft_strrchr.c | grep -E '(Error|Warning)'
+../libft/ft_strrchr.c: Error!
+Error: SPACE_REPLACE_TAB    (line:   5, col:  11):	Found space when expecting tab
+Error: SPACE_REPLACE_TAB    (line:   6, col:   9):	Found space when expecting tab
+Error: MISALIGNED_VAR_DECL  (line:   6, col:  10):	Misaligned variable declaration
+Error: SPC_BFR_OPERATOR     (line:  12, col:   8):	missing space before operator
+Norme check failed
+$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_strrchr.c main.c libft.a -o user_exe
+
+= Test 1 ===================================================
+$> ./user_exe 01
+$> diff -U 3 user_output_test01 test01.output
+
+Diff OK :D
+= Test 2 ===================================================
+$> ./user_exe 02
+$> diff -U 3 user_output_test02 test02.output
+
+Diff OK :D
+= Test 3 ===================================================
+$> ./user_exe 03
+$> diff -U 3 user_output_test03 test03.output
+
+Diff OK :D
+= Test 4 ===================================================
+$> ./user_exe 04
+$> diff -U 3 user_output_test04 test04.output
+
+Diff OK :D
+= Test 5 ===================================================
+$> ./user_exe 05
+$> diff -U 3 user_output_test05 test05.output
+
+Diff OK :D
+= Test 6 ===================================================
+$> ./user_exe 06
+$> diff -U 3 user_output_test06 test06.output
+
+Diff OK :D
+= Test 7 ===================================================
+$> ./user_exe 07
+$> diff -U 3 user_output_test07 test07.output
+
+Diff OK :D
+= Test 8 ===================================================
+$> ./user_exe 08
+$> diff -U 3 user_output_test08 test08.output
+
+Diff OK :D
+
+= ft_strnstr.c =================================================================
+$> norminette ft_strnstr.c | grep -E '(Error|Warning)'
+../libft/ft_strnstr.c: Error!
+Error: SPACE_REPLACE_TAB    (line:   5, col:  11):	Found space when expecting tab
+Error: SPACE_REPLACE_TAB    (line:   6, col:   9):	Found space when expecting tab
+Error: MISALIGNED_VAR_DECL  (line:   6, col:  10):	Misaligned variable declaration
+Error: SPACE_REPLACE_TAB    (line:   7, col:   9):	Found space when expecting tab
+Error: MISALIGNED_VAR_DECL  (line:   7, col:  10):	Misaligned variable declaration
+Error: EMPTY_LINE_FUNCTION  (line:  11, col:   1):	Empty line in function
+Error: SPACE_AFTER_KW       (line:  15, col:   5):	Missing space after keyword
+Error: SPC_BFR_PAR          (line:  15, col:  10):	Missing space before parenthesis (brace/bracket)
+Error: SPACE_AFTER_KW       (line:  17, col:   9):	Missing space after keyword
+Error: SPC_BFR_PAR          (line:  17, col:  11):	Missing space before parenthesis (brace/bracket)
+Error: NO_SPC_BFR_OPR       (line:  17, col:  32):	extra space before operator
+Error: SPC_AFTER_OPERATOR   (line:  17, col:  32):	missing space after operator
+Norme check failed
+$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_strnstr.c main.c libft.a -o user_exe
+
+= Test 1 ===================================================
+$> ./user_exe 01
+$> diff -U 3 user_output_test01 test01.output
+--- /Users/gmonitor/Documents/school21/libft-war-machine-master/tests/Part1_functions/ft_strnstr/user_output_test01	2021-05-02 20:47:26.000000000 +0300$
++++ /Users/gmonitor/Documents/school21/libft-war-machine-master/tests/Part1_functions/ft_strnstr/test01.output	2021-02-26 16:47:06.000000000 +0300$
+@@ -1 +1 @@$
+-NULL$
+\ No newline at end of file$
++lorem ipsum dolor sit amet$
+\ No newline at end of file$
+
+Diff KO :(
+= Test 2 ===================================================
+$> ./user_exe 02
+$> diff -U 3 user_output_test02 test02.output
+--- /Users/gmonitor/Documents/school21/libft-war-machine-master/tests/Part1_functions/ft_strnstr/user_output_test02	2021-05-02 20:47:26.000000000 +0300$
++++ /Users/gmonitor/Documents/school21/libft-war-machine-master/tests/Part1_functions/ft_strnstr/test02.output	2021-02-26 16:47:06.000000000 +0300$
+@@ -1 +1 @@$
+-NULL$
+\ No newline at end of file$
++ipsum dolor sit amet$
+\ No newline at end of file$
+
+Diff KO :(
+= Test 3 ===================================================
+$> ./user_exe 03
+$> diff -U 3 user_output_test03 test03.output
+--- /Users/gmonitor/Documents/school21/libft-war-machine-master/tests/Part1_functions/ft_strnstr/user_output_test03	2021-05-02 20:47:26.000000000 +0300$
++++ /Users/gmonitor/Documents/school21/libft-war-machine-master/tests/Part1_functions/ft_strnstr/test03.output	2021-02-26 16:47:06.000000000 +0300$
+@@ -1 +1 @@$
+-NULL$
+\ No newline at end of file$
++ipsum dolor sit lorem ipsum dolor$
+\ No newline at end of file$
+
+Diff KO :(
+= Test 4 ===================================================
+$> ./user_exe 04
+$> diff -U 3 user_output_test04 test04.output
+
+Diff OK :D
+= Test 5 ===================================================
+$> ./user_exe 05
+$> diff -U 3 user_output_test05 test05.output
+
+Diff OK :D
+= Test 6 ===================================================
+$> ./user_exe 06
+$> diff -U 3 user_output_test06 test06.output
+--- /Users/gmonitor/Documents/school21/libft-war-machine-master/tests/Part1_functions/ft_strnstr/user_output_test06	2021-05-02 20:47:27.000000000 +0300$
++++ /Users/gmonitor/Documents/school21/libft-war-machine-master/tests/Part1_functions/ft_strnstr/test06.output	2021-02-26 16:47:06.000000000 +0300$
+@@ -1 +1 @@$
+-NULL$
+\ No newline at end of file$
++dolor sit amet$
+\ No newline at end of file$
+
+Diff KO :(
+= Test 7 ===================================================
+$> ./user_exe 07
+$> diff -U 3 user_output_test07 test07.output
+
+Diff OK :D
+= Test 8 ===================================================
+$> ./user_exe 08
+$> diff -U 3 user_output_test08 test08.output
+
+Diff OK :D
+= Test 9 ===================================================
+$> ./user_exe 09
+$> diff -U 3 user_output_test09 test09.output
+
+Diff OK :D
+= Test 10 ==================================================
+$> ./user_exe 10
+$> diff -U 3 user_output_test10 test10.output
+
+Diff OK :D
+
+= ft_strncmp.c =================================================================
+$> norminette ft_strncmp.c | grep -E '(Error|Warning)'
+../libft/ft_strncmp.c: Error!
+Error: TOO_MANY_TAB         (line:   9, col:   1):	Extra tabs for indent level
+Error: TOO_MANY_TAB         (line:  10, col:   1):	Extra tabs for indent level
+Error: TOO_MANY_TAB         (line:  11, col:   1):	Extra tabs for indent level
+Norme check failed
+$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_strncmp.c main.c libft.a -o user_exe
+
+= Test 1 ===================================================
+$> ./user_exe 01
+$> diff -U 3 user_output_test01 test01.output
+
+Diff OK :D
+= Test 2 ===================================================
+$> ./user_exe 02
+$> diff -U 3 user_output_test02 test02.output
+
+Diff OK :D
+= Test 3 ===================================================
+$> ./user_exe 03
+$> diff -U 3 user_output_test03 test03.output
+
+Diff OK :D
+= Test 4 ===================================================
+$> ./user_exe 04
+$> diff -U 3 user_output_test04 test04.output
+
+Diff OK :D
+= Test 5 ===================================================
+$> ./user_exe 05
+$> diff -U 3 user_output_test05 test05.output
+
+Diff OK :D
+= Test 6 ===================================================
+$> ./user_exe 06
+$> diff -U 3 user_output_test06 test06.output
+
+Diff OK :D
+= Test 7 ===================================================
+$> ./user_exe 07
+$> diff -U 3 user_output_test07 test07.output
+
+Diff OK :D
+= Test 8 ===================================================
+$> ./user_exe 08
+$> diff -U 3 user_output_test08 test08.output
+--- /Users/gmonitor/Documents/school21/libft-war-machine-master/tests/Part1_functions/ft_strncmp/user_output_test08	2021-05-02 20:47:28.000000000 +0300$
++++ /Users/gmonitor/Documents/school21/libft-war-machine-master/tests/Part1_functions/ft_strncmp/test08.output	2021-02-26 16:47:06.000000000 +0300$
+@@ -1 +1 @@$
+--1$
+\ No newline at end of file$
++0$
+\ No newline at end of file$
+
+Diff KO :(
+= Test 9 ===================================================
+$> ./user_exe 09
+$> diff -U 3 user_output_test09 test09.output
+
+Diff OK :D
+= Test 10 ==================================================
+$> ./user_exe 10
+$> diff -U 3 user_output_test10 test10.output
+
+Diff OK :D
+= Test 11 ==================================================
+$> ./user_exe 11
+$> diff -U 3 user_output_test11 test11.output
+
+Diff OK :D
+
+= ft_atoi.c ====================================================================
+$> norminette ft_atoi.c | grep -E '(Error|Warning)'
+../libft/ft_atoi.c: Error!
+Error: SPACE_REPLACE_TAB    (line:   5, col:  13):	Found space when expecting tab
+Error: SPACE_REPLACE_TAB    (line:   6, col:   8):	Found space when expecting tab
+Error: MISALIGNED_VAR_DECL  (line:   6, col:   9):	Misaligned variable declaration
+Error: EOL_OPERATOR         (line:  10, col:  54):	Logic operator at the end of line
+Error: TOO_MANY_TAB         (line:  11, col:  13):	Extra tabs for indent level
+Error: SPC_BFR_OPERATOR     (line:  22, col:  12):	missing space before operator
+Error: SPC_BFR_OPERATOR     (line:  23, col:  12):	missing space before operator
+Norme check failed
+$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_atoi.c main.c libft.a -o user_exe
+
+= Test 1 ===================================================
+$> ./user_exe 01
+$> diff -U 3 user_output_test01 test01.output
+
+Diff OK :D
+= Test 2 ===================================================
+$> ./user_exe 02
+$> diff -U 3 user_output_test02 test02.output
+
+Diff OK :D
+= Test 3 ===================================================
+$> ./user_exe 03
+$> diff -U 3 user_output_test03 test03.output
+
+Diff OK :D
+= Test 4 ===================================================
+$> ./user_exe 04
+$> diff -U 3 user_output_test04 test04.output
+
+Diff OK :D
+= Test 5 ===================================================
+$> ./user_exe 05
+$> diff -U 3 user_output_test05 test05.output
+
+Diff OK :D
+= Test 6 ===================================================
+$> ./user_exe 06
+$> diff -U 3 user_output_test06 test06.output
+
+Diff OK :D
+= Test 7 ===================================================
+$> ./user_exe 07
+$> diff -U 3 user_output_test07 test07.output
+
+Diff OK :D
+= Test 8 ===================================================
+$> ./user_exe 08
+$> diff -U 3 user_output_test08 test08.output
+
+Diff OK :D
+= Test 9 ===================================================
+$> ./user_exe 09
+$> diff -U 3 user_output_test09 test09.output
+
+Diff OK :D
+= Test 10 ==================================================
+$> ./user_exe 10
+$> diff -U 3 user_output_test10 test10.output
+
+Diff OK :D
+= Test 11 ==================================================
+$> ./user_exe 11
+$> diff -U 3 user_output_test11 test11.output
+
+Diff OK :D
+= Test 12 ==================================================
+$> ./user_exe 12
+$> diff -U 3 user_output_test12 test12.output
+
+Diff OK :D
+= Test 13 ==================================================
+$> ./user_exe 13
+$> diff -U 3 user_output_test13 test13.output
+
+Diff OK :D
+= Test 14 ==================================================
+$> ./user_exe 14
+$> diff -U 3 user_output_test14 test14.output
+
+Diff OK :D
+= Test 15 ==================================================
+$> ./user_exe 15
+$> diff -U 3 user_output_test15 test15.output
+
+Diff OK :D
+= Test 16 ==================================================
+$> ./user_exe 16
+$> diff -U 3 user_output_test16 test16.output
+
+Diff OK :D
+= Test 17 ==================================================
+$> ./user_exe 17
+$> diff -U 3 user_output_test17 test17.output
+
+Diff OK :D
+= Test 18 ==================================================
+$> ./user_exe 18
+$> diff -U 3 user_output_test18 test18.output
+
+Diff OK :D
+= Test 19 ==================================================
+$> ./user_exe 19
+$> diff -U 3 user_output_test19 test19.output
+
+Diff OK :D
+
+= ft_isalpha.c =================================================================
+$> norminette ft_isalpha.c | grep -E '(Error|Warning)'
+$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_isalpha.c main.c libft.a -o user_exe
+
+= Test 1 ===================================================
+$> ./user_exe 01
+$> diff -U 3 user_output_test01 test01.output
+
+Diff OK :D
+= Test 2 ===================================================
+$> ./user_exe 02
+$> diff -U 3 user_output_test02 test02.output
+
+Diff OK :D
+= Test 3 ===================================================
+$> ./user_exe 03
+$> diff -U 3 user_output_test03 test03.output
+
+Diff OK :D
+= Test 4 ===================================================
+$> ./user_exe 04
+$> diff -U 3 user_output_test04 test04.output
+
+Diff OK :D
+= Test 5 ===================================================
+$> ./user_exe 05
+$> diff -U 3 user_output_test05 test05.output
+
+Diff OK :D
+= Test 6 ===================================================
+$> ./user_exe 06
+$> diff -U 3 user_output_test06 test06.output
+
+Diff OK :D
+= Test 7 ===================================================
+$> ./user_exe 07
+$> diff -U 3 user_output_test07 test07.output
+
+Diff OK :D
+
+= ft_isdigit.c =================================================================
+$> norminette ft_isdigit.c | grep -E '(Error|Warning)'
+$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_isdigit.c main.c libft.a -o user_exe
+
+= Test 1 ===================================================
+$> ./user_exe 01
+$> diff -U 3 user_output_test01 test01.output
+
+Diff OK :D
+= Test 2 ===================================================
+$> ./user_exe 02
+$> diff -U 3 user_output_test02 test02.output
+
+Diff OK :D
+= Test 3 ===================================================
+$> ./user_exe 03
+$> diff -U 3 user_output_test03 test03.output
+
+Diff OK :D
+= Test 4 ===================================================
+$> ./user_exe 04
+$> diff -U 3 user_output_test04 test04.output
+
+Diff OK :D
+= Test 5 ===================================================
+$> ./user_exe 05
+$> diff -U 3 user_output_test05 test05.output
+
+Diff OK :D
+= Test 6 ===================================================
+$> ./user_exe 06
+$> diff -U 3 user_output_test06 test06.output
+
+Diff OK :D
+= Test 7 ===================================================
+$> ./user_exe 07
+$> diff -U 3 user_output_test07 test07.output
+
+Diff OK :D
+
+= ft_isalnum.c =================================================================
+$> norminette ft_isalnum.c | grep -E '(Error|Warning)'
+../libft/ft_isalnum.c: Error!
+Error: LINE_TOO_LONG        (line:   5, col:  84):	line too long
+Norme check failed
+$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_isalnum.c main.c libft.a -o user_exe
+
+= Test 1 ===================================================
+$> ./user_exe 01
+$> diff -U 3 user_output_test01 test01.output
+
+Diff OK :D
+= Test 2 ===================================================
+$> ./user_exe 02
+$> diff -U 3 user_output_test02 test02.output
+
+Diff OK :D
+= Test 3 ===================================================
+$> ./user_exe 03
+$> diff -U 3 user_output_test03 test03.output
+
+Diff OK :D
+= Test 4 ===================================================
+$> ./user_exe 04
+$> diff -U 3 user_output_test04 test04.output
+
+Diff OK :D
+= Test 5 ===================================================
+$> ./user_exe 05
+$> diff -U 3 user_output_test05 test05.output
+
+Diff OK :D
+= Test 6 ===================================================
+$> ./user_exe 06
+$> diff -U 3 user_output_test06 test06.output
+
+Diff OK :D
+= Test 7 ===================================================
+$> ./user_exe 07
+$> diff -U 3 user_output_test07 test07.output
+
+Diff OK :D
+
+= ft_isascii.c =================================================================
+$> norminette ft_isascii.c | grep -E '(Error|Warning)'
+$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_isascii.c main.c libft.a -o user_exe
+
+= Test 1 ===================================================
+$> ./user_exe 01
+$> diff -U 3 user_output_test01 test01.output
+
+Diff OK :D
+= Test 2 ===================================================
+$> ./user_exe 02
+$> diff -U 3 user_output_test02 test02.output
+
+Diff OK :D
+= Test 3 ===================================================
+$> ./user_exe 03
+$> diff -U 3 user_output_test03 test03.output
+
+Diff OK :D
+= Test 4 ===================================================
+$> ./user_exe 04
+$> diff -U 3 user_output_test04 test04.output
+
+Diff OK :D
+= Test 5 ===================================================
+$> ./user_exe 05
+$> diff -U 3 user_output_test05 test05.output
+
+Diff OK :D
+= Test 6 ===================================================
+$> ./user_exe 06
+$> diff -U 3 user_output_test06 test06.output
+
+Diff OK :D
+= Test 7 ===================================================
+$> ./user_exe 07
+$> diff -U 3 user_output_test07 test07.output
+
+Diff OK :D
+= Test 8 ===================================================
+$> ./user_exe 08
+$> diff -U 3 user_output_test08 test08.output
+
+Diff OK :D
+
+= ft_isprint.c =================================================================
+$> norminette ft_isprint.c | grep -E '(Error|Warning)'
+$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_isprint.c main.c libft.a -o user_exe
+
+= Test 1 ===================================================
+$> ./user_exe 01
+$> diff -U 3 user_output_test01 test01.output
+
+Diff OK :D
+= Test 2 ===================================================
+$> ./user_exe 02
+$> diff -U 3 user_output_test02 test02.output
+
+Diff OK :D
+= Test 3 ===================================================
+$> ./user_exe 03
+$> diff -U 3 user_output_test03 test03.output
+
+Diff OK :D
+= Test 4 ===================================================
+$> ./user_exe 04
+$> diff -U 3 user_output_test04 test04.output
+
+Diff OK :D
+= Test 5 ===================================================
+$> ./user_exe 05
+$> diff -U 3 user_output_test05 test05.output
+
+Diff OK :D
+= Test 6 ===================================================
+$> ./user_exe 06
+$> diff -U 3 user_output_test06 test06.output
+
+Diff OK :D
+= Test 7 ===================================================
+$> ./user_exe 07
+$> diff -U 3 user_output_test07 test07.output
+
+Diff OK :D
+
+= ft_toupper.c =================================================================
+$> norminette ft_toupper.c | grep -E '(Error|Warning)'
+$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_toupper.c main.c libft.a -o user_exe
+
+= Test 1 ===================================================
+$> ./user_exe 01
+$> diff -U 3 user_output_test01 test01.output
+
+Diff OK :D
+= Test 2 ===================================================
+$> ./user_exe 02
+$> diff -U 3 user_output_test02 test02.output
+
+Diff OK :D
+= Test 3 ===================================================
+$> ./user_exe 03
+$> diff -U 3 user_output_test03 test03.output
+
+Diff OK :D
+= Test 4 ===================================================
+$> ./user_exe 04
+$> diff -U 3 user_output_test04 test04.output
+
+Diff OK :D
+= Test 5 ===================================================
+$> ./user_exe 05
+$> diff -U 3 user_output_test05 test05.output
+
+Diff OK :D
+= Test 6 ===================================================
+$> ./user_exe 06
+$> diff -U 3 user_output_test06 test06.output
+
+Diff OK :D
+= Test 7 ===================================================
+$> ./user_exe 07
+$> diff -U 3 user_output_test07 test07.output
+
+Diff OK :D
+
+= ft_tolower.c =================================================================
+$> norminette ft_tolower.c | grep -E '(Error|Warning)'
+$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_tolower.c main.c libft.a -o user_exe
+
+= Test 1 ===================================================
+$> ./user_exe 01
+$> diff -U 3 user_output_test01 test01.output
+
+Diff OK :D
+= Test 2 ===================================================
+$> ./user_exe 02
+$> diff -U 3 user_output_test02 test02.output
+
+Diff OK :D
+= Test 3 ===================================================
+$> ./user_exe 03
+$> diff -U 3 user_output_test03 test03.output
+
+Diff OK :D
+= Test 4 ===================================================
+$> ./user_exe 04
+$> diff -U 3 user_output_test04 test04.output
+
+Diff OK :D
+= Test 5 ===================================================
+$> ./user_exe 05
+$> diff -U 3 user_output_test05 test05.output
+
+Diff OK :D
+= Test 6 ===================================================
+$> ./user_exe 06
+$> diff -U 3 user_output_test06 test06.output
+
+Diff OK :D
+= Test 7 ===================================================
+$> ./user_exe 07
+$> diff -U 3 user_output_test07 test07.output
+
+Diff OK :D
+
+= Part2_functions ==============================================================
+
+= ft_strmapi.c =================================================================
+$> norminette ft_strmapi.c | grep -E '(Error|Warning)'
+../libft/ft_strmapi.c: Error!
+Error: SPACE_REPLACE_TAB    (line:   5, col:   9):	Found space when expecting tab
+Error: SPACE_REPLACE_TAB    (line:   6, col:  11):	Found space when expecting tab
+Error: MISALIGNED_VAR_DECL  (line:   6, col:  12):	Misaligned variable declaration
+Error: ASSIGN_IN_CONTROL    (line:  10, col:  27):	Assignment in control structure
+Norme check failed
+$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_strmapi.c main.c libft.a -o user_exe
+
+/Users/gmonitor/Documents/school21/libft-war-machine-master/tests/Part2_functions/ft_strmapi/main.c:56:13: error: implicit declaration of function 'ft_strmapi' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+                strmapi = ft_strmapi(str, &mapi);
+                          ^
+/Users/gmonitor/Documents/school21/libft-war-machine-master/tests/Part2_functions/ft_strmapi/main.c:56:11: error: incompatible integer to pointer conversion assigning to 'char *' from 'int' [-Werror,-Wint-conversion]
+                strmapi = ft_strmapi(str, &mapi);
+                        ^ ~~~~~~~~~~~~~~~~~~~~~~
+2 errors generated.
+
+= ft_substr.c ==================================================================
+$> norminette ft_substr.c | grep -E '(Error|Warning)'
+../libft/ft_substr.c: Error!
+Error: SPACE_REPLACE_TAB    (line:   5, col:   9):	Found space when expecting tab
+Error: SPACE_REPLACE_TAB    (line:   6, col:   8):	Found space when expecting tab
+Error: MISALIGNED_VAR_DECL  (line:   6, col:   9):	Misaligned variable declaration
+Error: SPC_BFR_OPERATOR     (line:  14, col:   8):	missing space before operator
+Error: SPC_BFR_OPERATOR     (line:  22, col:   9):	missing space before operator
+Norme check failed
+$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_substr.c main.c libft.a -o user_exe
+
+Undefined symbols for architecture x86_64:
+  "_ft_strlcpy", referenced from:
+      _ft_strdup in libft.a(ft_strdup.o)
+ld: symbol(s) not found for architecture x86_64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+
+= ft_strjoin.c =================================================================
+$> norminette ft_strjoin.c | grep -E '(Error|Warning)'
+../libft/ft_strjoin.c: Error!
+Error: SPACE_BEFORE_FUNC    (line:   3, col:   5):	space before function name
+Error: SPACE_REPLACE_TAB    (line:   5, col:   8):	Found space when expecting tab
+Error: SPACE_REPLACE_TAB    (line:   6, col:   8):	Found space when expecting tab
+Error: SPACE_REPLACE_TAB    (line:   7, col:   9):	Found space when expecting tab
+Error: MISALIGNED_VAR_DECL  (line:   7, col:  10):	Misaligned variable declaration
+Error: SPC_BFR_OPERATOR     (line:  15, col:   9):	missing space before operator
+Error: SPC_BFR_OPERATOR     (line:  18, col:   9):	missing space before operator
+Norme check failed
+$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_strjoin.c main.c libft.a -o user_exe
+
+Undefined symbols for architecture x86_64:
+  "_ft_strlcpy", referenced from:
+      _ft_strjoin in ft_strjoin-38e022.o
+ld: symbol(s) not found for architecture x86_64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+
+= ft_strtrim.c =================================================================
+$> norminette ft_strtrim.c | grep -E '(Error|Warning)'
+../libft/ft_strtrim.c: Error!
+Error: SPACE_BEFORE_FUNC    (line:   3, col:   5):	space before function name
+Error: SPACE_REPLACE_TAB    (line:   5, col:   8):	Found space when expecting tab
+Error: SPACE_REPLACE_TAB    (line:   6, col:   9):	Found space when expecting tab
+Error: MISALIGNED_VAR_DECL  (line:   6, col:  10):	Misaligned variable declaration
+Norme check failed
+$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_strtrim.c main.c libft.a -o user_exe
+
+/Users/gmonitor/Documents/school21/libft-war-machine-master/tests/Part2_functions/ft_strtrim/main.c:38:19: error: implicit declaration of function 'ft_strtrim' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+                if (!(strtrim = ft_strtrim(s1, " ")))
+                                ^
+/Users/gmonitor/Documents/school21/libft-war-machine-master/tests/Part2_functions/ft_strtrim/main.c:38:19: note: did you mean 'ft_strjoin'?
+/Users/gmonitor/Documents/school21/libft-war-machine-master/tests/Part2_functions/ft_strtrim/../../../libft.h:42:7: note: 'ft_strjoin' declared here
+char    *ft_strjoin(char const *s1, char const *s2);
+         ^
+/Users/gmonitor/Documents/school21/libft-war-machine-master/tests/Part2_functions/ft_strtrim/main.c:38:17: error: incompatible integer to pointer conversion assigning to 'char *' from 'int' [-Werror,-Wint-conversion]
+                if (!(strtrim = ft_strtrim(s1, " ")))
+                              ^ ~~~~~~~~~~~~~~~~~~~
+/Users/gmonitor/Documents/school21/libft-war-machine-master/tests/Part2_functions/ft_strtrim/main.c:48:19: error: implicit declaration of function 'ft_strtrim' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+                if (!(strtrim = ft_strtrim(s1, "te")))
+                                ^
+/Users/gmonitor/Documents/school21/libft-war-machine-master/tests/Part2_functions/ft_strtrim/main.c:48:17: error: incompatible integer to pointer conversion assigning to 'char *' from 'int' [-Werror,-Wint-conversion]
+                if (!(strtrim = ft_strtrim(s1, "te")))
+                              ^ ~~~~~~~~~~~~~~~~~~~~
+/Users/gmonitor/Documents/school21/libft-war-machine-master/tests/Part2_functions/ft_strtrim/main.c:58:19: error: implicit declaration of function 'ft_strtrim' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+                if (!(strtrim = ft_strtrim(s1, "l ")))
+                                ^
+/Users/gmonitor/Documents/school21/libft-war-machine-master/tests/Part2_functions/ft_strtrim/main.c:58:17: error: incompatible integer to pointer conversion assigning to 'char *' from 'int' [-Werror,-Wint-conversion]
+                if (!(strtrim = ft_strtrim(s1, "l ")))
+                              ^ ~~~~~~~~~~~~~~~~~~~~
+/Users/gmonitor/Documents/school21/libft-war-machine-master/tests/Part2_functions/ft_strtrim/main.c:68:19: error: implicit declaration of function 'ft_strtrim' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+                if (!(strtrim = ft_strtrim(s1, "tel")))
+                                ^
+/Users/gmonitor/Documents/school21/libft-war-machine-master/tests/Part2_functions/ft_strtrim/main.c:68:17: error: incompatible integer to pointer conversion assigning to 'char *' from 'int' [-Werror,-Wint-conversion]
+                if (!(strtrim = ft_strtrim(s1, "tel")))
+                              ^ ~~~~~~~~~~~~~~~~~~~~~
+/Users/gmonitor/Documents/school21/libft-war-machine-master/tests/Part2_functions/ft_strtrim/main.c:78:19: error: implicit declaration of function 'ft_strtrim' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+                if (!(strtrim = ft_strtrim(s1, " ")))
+                                ^
+/Users/gmonitor/Documents/school21/libft-war-machine-master/tests/Part2_functions/ft_strtrim/main.c:78:17: error: incompatible integer to pointer conversion assigning to 'char *' from 'int' [-Werror,-Wint-conversion]
+                if (!(strtrim = ft_strtrim(s1, " ")))
+                              ^ ~~~~~~~~~~~~~~~~~~~
+10 errors generated.
+
+= ft_split.c ===================================================================
+$> norminette ft_split.c | grep -E '(Error|Warning)'
+../libft/ft_split.c: Error!
+Error: SPACE_REPLACE_TAB    (line:   5, col:   8):	Found space when expecting tab
+Error: SPACE_AFTER_KW       (line:   8, col:   5):	Missing space after keyword
+Error: SPC_BFR_PAR          (line:   8, col:  10):	Missing space before parenthesis (brace/bracket)
+Error: SPACE_BEFORE_FUNC    (line:  16, col:  12):	space before function name
+Error: SPACE_REPLACE_TAB    (line:  18, col:   8):	Found space when expecting tab
+Error: SPACE_AFTER_KW       (line:  21, col:   5):	Missing space after keyword
+Error: SPC_BFR_PAR          (line:  21, col:  10):	Missing space before parenthesis (brace/bracket)
+Error: CONSECUTIVE_NEWLINES (line:  35, col:   1):	Consecutive newlines
+Error: SPACE_REPLACE_TAB    (line:  38, col:   8):	Found space when expecting tab
+Error: SPACE_REPLACE_TAB    (line:  39, col:   8):	Found space when expecting tab
+Error: SPACE_REPLACE_TAB    (line:  40, col:   8):	Found space when expecting tab
+Error: SPACE_REPLACE_TAB    (line:  41, col:   9):	Found space when expecting tab
+Error: MISALIGNED_VAR_DECL  (line:  41, col:  10):	Misaligned variable declaration
+Error: SPC_BFR_OPERATOR     (line:  58, col:  10):	missing space before operator
+Error: TOO_MANY_LINES       (line:  64, col:   1):	Function has more than 25 lines
+Norme check failed
+$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_split.c main.c libft.a -o user_exe
+
+Undefined symbols for architecture x86_64:
+  "_ft_strlcpy", referenced from:
+      _ft_split in ft_split-ff4218.o
+ld: symbol(s) not found for architecture x86_64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+
+= ft_itoa.c ====================================================================
+$> norminette ft_itoa.c | grep -E '(Error|Warning)'
+../libft/ft_itoa.c: Error!
+Error: SPACE_REPLACE_TAB    (line:   5, col:   8):	Found space when expecting tab
+Error: SPC_BFR_OPERATOR     (line:   9, col:  10):	missing space before operator
+Error: SPC_BFR_OPERATOR     (line:  12, col:  10):	missing space before operator
+Error: SPACE_REPLACE_TAB    (line:  20, col:   9):	Found space when expecting tab
+Error: SPACE_REPLACE_TAB    (line:  21, col:   8):	Found space when expecting tab
+Error: MISALIGNED_VAR_DECL  (line:  21, col:   9):	Misaligned variable declaration
+Error: SPACE_REPLACE_TAB    (line:  22, col:   8):	Found space when expecting tab
+Error: MISALIGNED_VAR_DECL  (line:  22, col:   9):	Misaligned variable declaration
+Error: SPACE_REPLACE_TAB    (line:  23, col:   9):	Found space when expecting tab
+Error: SPC_BFR_OPERATOR     (line:  31, col:   8):	missing space before operator
+Error: SPC_BFR_OPERATOR     (line:  35, col:  10):	missing space before operator
+Error: SPC_BFR_OPERATOR     (line:  46, col:  10):	missing space before operator
+Error: TOO_MANY_LINES       (line:  50, col:   1):	Function has more than 25 lines
+Error: SPACE_BEFORE_FUNC    (line:  52, col:   4):	space before function name
+Error: NO_ARGS_VOID         (line:  52, col:  11):	Empty function argument requires void
+Error: SPACE_REPLACE_TAB    (line:  54, col:   9):	Found space when expecting tab
+Error: DECL_ASSIGN_LINE     (line:  54, col:  17):	Declaration and assignation on a single line
+Error: NL_AFTER_VAR_DECL    (line:  55, col:   1):	Variable declarations must be followed by a newline
+Error: RETURN_PARENTHESIS   (line:  56, col:  12):	Return value must be in parenthesis
+Norme check failed
+$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_itoa.c main.c libft.a -o user_exe
+
+duplicate symbol '_main' in:
+    /var/folders/zz/zyxvpxvq6csfxvn_n0001x70000g9r/T/ft_itoa-e1baad.o
+    /var/folders/zz/zyxvpxvq6csfxvn_n0001x70000g9r/T/main-946494.o
+ld: 1 duplicate symbol for architecture x86_64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+
+= ft_putchar_fd.c ==============================================================
+$> norminette ft_putchar_fd.c | grep -E '(Error|Warning)'
+$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_putchar_fd.c main.c libft.a -o user_exe
+
+= Test 1 ===================================================
+$> ./user_exe 01
+$> diff -U 3 user_output_test01 test01.output
+
+Diff OK :D
+= Test 2 ===================================================
+$> ./user_exe 02
+$> diff -U 3 user_output_test02 test02.output
+
+Diff OK :D
+= Test 3 ===================================================
+$> ./user_exe 03
+$> diff -U 3 user_output_test03 test03.output
+
+Diff OK :D
+= Test 4 ===================================================
+$> ./user_exe 04
+$> diff -U 3 user_output_test04 test04.output
+
+Diff OK :D
+= Test 5 ===================================================
+$> ./user_exe 05
+$> diff -U 3 user_output_test05 test05.output
+
+Diff OK :D
+= Test 6 ===================================================
+$> ./user_exe 06
+$> diff -U 3 user_output_test06 test06.output
+
+Diff OK :D
+= Test 7 ===================================================
+$> ./user_exe 07
+$> diff -U 3 user_output_test07 test07.output
+
+Diff OK :D
+
+= ft_putstr_fd.c ===============================================================
+$> norminette ft_putstr_fd.c | grep -E '(Error|Warning)'
+../libft/ft_putstr_fd.c: Error!
+Error: SPACE_BEFORE_FUNC    (line:   3, col:   5):	space before function name
+Norme check failed
+$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_putstr_fd.c main.c libft.a -o user_exe
+
+= Test 1 ===================================================
+$> ./user_exe 01
+$> diff -U 3 user_output_test01 test01.output
+
+Diff OK :D
+= Test 2 ===================================================
+$> ./user_exe 02
+$> diff -U 3 user_output_test02 test02.output
+
+Diff OK :D
+= Test 3 ===================================================
+$> ./user_exe 03
+$> diff -U 3 user_output_test03 test03.output
+
+Diff OK :D
+= Test 4 ===================================================
+$> ./user_exe 04
+$> diff -U 3 user_output_test04 test04.output
+
+Diff OK :D
+
+= ft_putendl_fd.c ==============================================================
+$> norminette ft_putendl_fd.c | grep -E '(Error|Warning)'
+../libft/ft_putendl_fd.c: Error!
+Error: SPACE_BEFORE_FUNC    (line:   3, col:   5):	space before function name
+Norme check failed
+$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_putendl_fd.c main.c libft.a -o user_exe
+
+= Test 1 ===================================================
+$> ./user_exe 01
+$> diff -U 3 user_output_test01 test01.output
+
+Diff OK :D
+= Test 2 ===================================================
+$> ./user_exe 02
+$> diff -U 3 user_output_test02 test02.output
+
+Diff OK :D
+= Test 3 ===================================================
+$> ./user_exe 03
+$> diff -U 3 user_output_test03 test03.output
+
+Diff OK :D
+= Test 4 ===================================================
+$> ./user_exe 04
+$> diff -U 3 user_output_test04 test04.output
+
+Diff OK :D
+
+= ft_putnbr_fd.c ===============================================================
+$> norminette ft_putnbr_fd.c | grep -E '(Error|Warning)'
+../libft/ft_putnbr_fd.c: Error!
+Error: SPACE_BEFORE_FUNC    (line:   3, col:   5):	space before function name
+Error: SPACE_REPLACE_TAB    (line:   5, col:   9):	Found space when expecting tab
+Norme check failed
+$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_putnbr_fd.c main.c libft.a -o user_exe
+
+duplicate symbol '_main' in:
+    /var/folders/zz/zyxvpxvq6csfxvn_n0001x70000g9r/T/main-b2fe07.o
+    /Users/gmonitor/Documents/school21/libft-war-machine-master/dirlibft/libft.a(ft_itoa.o)
+ld: 1 duplicate symbol for architecture x86_64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+
+= Bonus_functions ==============================================================
+
+= ft_lstnew_bonus.c ============================================================
+Nothing turned in
+
+= ft_lstdelone_bonus.c =========================================================
+Nothing turned in
+
+= ft_lstclear_bonus.c ==========================================================
+Nothing turned in
+
+= ft_lstadd_front_bonus.c ======================================================
+Nothing turned in
+
+= ft_lstadd_back_bonus.c =======================================================
+Nothing turned in
+
+= ft_lstsize_bonus.c ===========================================================
+Nothing turned in
+
+= ft_lstiter_bonus.c ===========================================================
+Nothing turned in
+
+= ft_lstmap_bonus.c ============================================================
+Nothing turned in
+
+= ft_lstlast_bonus.c ===========================================================
+Nothing turned in
+
+= Additional_functions =========================================================
+
+= ft_isspace.c =================================================================
+$> norminette ft_isspace.c | grep -E '(Error|Warning)'
+$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_isspace.c main.c libft.a -o user_exe
+
+= Test 1 ===================================================
+$> ./user_exe 01
+$> diff -U 3 user_output_test01 test01.output
+
+Diff OK :D
+= Test 2 ===================================================
+$> ./user_exe 02
+$> diff -U 3 user_output_test02 test02.output
+
+Diff OK :D
+= Test 3 ===================================================
+$> ./user_exe 03
+$> diff -U 3 user_output_test03 test03.output
+
+Diff OK :D
+= Test 4 ===================================================
+$> ./user_exe 04
+$> diff -U 3 user_output_test04 test04.output
+
+Diff OK :D
+= Test 5 ===================================================
+$> ./user_exe 05
+$> diff -U 3 user_output_test05 test05.output
+
+Diff OK :D
+= Test 6 ===================================================
+$> ./user_exe 06
+$> diff -U 3 user_output_test06 test06.output
+
+Diff OK :D
+= Test 7 ===================================================
+$> ./user_exe 07
+$> diff -U 3 user_output_test07 test07.output
+
+Diff OK :D

@@ -11,10 +11,10 @@ void	*ft_memccpy(void *dest, const void *src, int c, size_t nmb)
 	{
 		*dest_cast = *src_cast;
 		if (*dest_cast == (unsigned char)c)
-			return (dest);
+			return (++dest_cast);
 		dest_cast++;
 		src_cast++;
 		nmb--;
 	}
-	return (dest);
+	return (NULL);
 }

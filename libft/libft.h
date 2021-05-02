@@ -19,7 +19,7 @@ void	*ft_memalloc(size_t nmb);
 void	*ft_memchr(void* src, int c, size_t nmb);
 int 	ft_memcmp(const void *src, const void *src2, size_t nmb);
 void	*ft_memcpy(void *dest, const void *src, size_t nmb);
-void	*ft_memccpy(void *dest, const void *src, int c, size_t n);
+void	*ft_memccpy(void *dest, const void *src, int c, size_t nmb);
 void	*ft_memmove(void* dest, const void* src, size_t nmb);
 void	*ft_memset(void *s1, int c, size_t nmb);
 void	*ft_calloc(size_t nmemb, size_t size);
