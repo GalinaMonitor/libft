@@ -2,10 +2,15 @@
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
-	void *mem;
+	void	*mem;
 
 	mem = malloc(nmemb * size);
+	if (mem == NULL)
+	{
+		free(mem);
+		return (NULL);
+	}
 	if (mem)
 		ft_bzero(mem, size * nmemb);
-	return(mem);
+	return (mem);
 }

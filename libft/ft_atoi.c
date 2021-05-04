@@ -4,13 +4,13 @@
 
 int	ft_atoi(const char *str)
 {
-	long nbr;
-	int min;
+	long	nbr;
+	int		min;
 
 	min = 1;
 	nbr = 0;
-	while (*str == ' ' || *str == '\t' || *str == '\n' ||
-			*str == '\r' || *str == '\v' || *str == '\f')
+	while (*str == ' ' || *str == '\t' || *str == '\n'
+		|| *str == '\r' || *str == '\v' || *str == '\f')
 		str++;
 	if (*str == '+')
 		str++;
@@ -21,8 +21,8 @@ int	ft_atoi(const char *str)
 	}
 	while (*str >= '0' && *str <= '9')
 	{
-		nbr*= 10;
-		nbr+= *str - 48;
+		nbr *= 10;
+		nbr += *str - 48;
 		str++;
 	}
 	return ((int)nbr * min);

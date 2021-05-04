@@ -43,8 +43,11 @@ char	**ft_split(char const *s, char c)
 	words = ft_words_count(s, c);
 	mass = (char **)malloc(sizeof(char *) * words + 1);
 	if (mass == NULL)
+	{
+		free(mass);
 		return (NULL);
-	while (words > 1)
+	}
+	while (words-- > 1)
 	{
 		if (*s == c)
 			while (*s == c)
@@ -56,7 +59,6 @@ char	**ft_split(char const *s, char c)
 		ft_strlcpy(mass[ind], s, word_size + 1);
 		s += word_size;
 		ind++;
-		words--;
 	}
 	mass[ind] = NULL;
 	return (mass);

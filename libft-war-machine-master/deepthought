@@ -3,7 +3,7 @@ $> hostname; uname -msr
 ga-n1.msk.21-school.ru
 Darwin 18.7.0 x86_64
 $> date
-Tue May  4 17:05:48 MSK 2021
+Tue May  4 20:00:34 MSK 2021
 $> gcc --version
 Apple clang version 11.0.0 (clang-1100.0.33.17)
 Target: x86_64-apple-darwin18.7.0
@@ -17,12 +17,6 @@ InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault
 
 = libft.h=======================================================================
 $> norminette libft.h | grep -E '(Error|Warning)'
-/Users/gmonitor/Documents/school21/libft-war-machine-master/dirlibft/libft.h: Error!
-Error: SPC_AFTER_POINTER    (line:  19, col:  24):	space after pointer
-Error: SPACE_REPLACE_TAB    (line:  20, col:   4):	Found space when expecting tab
-Error: SPC_AFTER_POINTER    (line:  23, col:  25):	space after pointer
-Error: SPC_AFTER_POINTER    (line:  23, col:  43):	space after pointer
-Norme check failed
 
 = Compiling libft ==============================================================
 $> make re
@@ -71,19 +65,12 @@ $> make bonus
 make: *** No rule to make target `bonus'.  Stop.
 
 $> ls -la libft.a
--rw-r--r--  1 gmonitor  4221  31704 May  4 17:05 /Users/gmonitor/Documents/school21/libft-war-machine-master/dirlibft/libft.a
+-rw-r--r--  1 gmonitor  4221  31744 May  4 20:00 /Users/gmonitor/Documents/school21/libft-war-machine-master/dirlibft/libft.a
 
 = Part1_functions ==============================================================
 
 = ft_memset.c ==================================================================
 $> norminette ft_memset.c | grep -E '(Error|Warning)'
-../libft/ft_memset.c: Error!
-Error: SPACE_REPLACE_TAB    (line:   5, col:  18):	Found space when expecting tab
-Error: SPACE_AFTER_KW       (line:   8, col:   5):	Missing space after keyword
-Error: SPC_BFR_PAR          (line:   8, col:  10):	Missing space before parenthesis (brace/bracket)
-Error: SPACE_AFTER_KW       (line:  14, col:   5):	Missing space after keyword
-Error: SPC_BFR_PAR          (line:  14, col:  11):	Missing space before parenthesis (brace/bracket)
-Norme check failed
 $> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_memset.c main.c libft.a -o user_exe
 
 = Test 1 ===================================================
@@ -109,11 +96,6 @@ Diff OK :D
 
 = ft_bzero.c ===================================================================
 $> norminette ft_bzero.c | grep -E '(Error|Warning)'
-../libft/ft_bzero.c: Error!
-Error: SPACE_REPLACE_TAB    (line:   5, col:  18):	Found space when expecting tab
-Error: SPACE_AFTER_KW       (line:   8, col:   5):	Missing space after keyword
-Error: SPC_BFR_PAR          (line:   8, col:  10):	Missing space before parenthesis (brace/bracket)
-Norme check failed
 $> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_bzero.c main.c libft.a -o user_exe
 
 = Test 1 ===================================================
@@ -129,11 +111,6 @@ Diff OK :D
 
 = ft_calloc.c ==================================================================
 $> norminette ft_calloc.c | grep -E '(Error|Warning)'
-../libft/ft_calloc.c: Error!
-Error: SPACE_REPLACE_TAB    (line:   5, col:   9):	Found space when expecting tab
-Error: SPACE_AFTER_KW       (line:  10, col:   5):	Missing space after keyword
-Error: SPC_BFR_PAR          (line:  10, col:  11):	Missing space before parenthesis (brace/bracket)
-Norme check failed
 $> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_calloc.c main.c libft.a -o user_exe
 
 = Test 1 ===================================================
@@ -144,10 +121,6 @@ Diff OK :D
 
 = ft_memcpy.c ==================================================================
 $> norminette ft_memcpy.c | grep -E '(Error|Warning)'
-../libft/ft_memcpy.c: Error!
-Error: SPACE_REPLACE_TAB    (line:   5, col:  18):	Found space when expecting tab
-Error: SPACE_REPLACE_TAB    (line:   6, col:  18):	Found space when expecting tab
-Norme check failed
 $> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_memcpy.c main.c libft.a -o user_exe
 
 = Test 1 ===================================================
@@ -168,10 +141,6 @@ Diff OK :D
 
 = ft_memccpy.c =================================================================
 $> norminette ft_memccpy.c | grep -E '(Error|Warning)'
-../libft/ft_memccpy.c: Error!
-Error: SPACE_REPLACE_TAB    (line:   5, col:  18):	Found space when expecting tab
-Error: SPACE_REPLACE_TAB    (line:   6, col:  18):	Found space when expecting tab
-Norme check failed
 $> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_memccpy.c main.c libft.a -o user_exe
 
 = Test 1 ===================================================
@@ -197,15 +166,6 @@ Diff OK :D
 
 = ft_memmove.c =================================================================
 $> norminette ft_memmove.c | grep -E '(Error|Warning)'
-../libft/ft_memmove.c: Error!
-Error: SPC_AFTER_POINTER    (line:   3, col:  25):	space after pointer
-Error: SPC_AFTER_POINTER    (line:   3, col:  43):	space after pointer
-Error: SPACE_REPLACE_TAB    (line:   5, col:  18):	Found space when expecting tab
-Error: SPACE_REPLACE_TAB    (line:   6, col:  18):	Found space when expecting tab
-Error: SPC_BFR_OPERATOR     (line:  22, col:  17):	missing space before operator
-Error: SPC_BFR_OPERATOR     (line:  23, col:  18):	missing space before operator
-Error: TOO_MANY_LINES       (line:  33, col:   1):	Function has more than 25 lines
-Norme check failed
 $> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_memmove.c main.c libft.a -o user_exe
 
 = Test 1 ===================================================
@@ -236,9 +196,6 @@ Diff OK :D
 
 = ft_memchr.c ==================================================================
 $> norminette ft_memchr.c | grep -E '(Error|Warning)'
-../libft/ft_memchr.c: Error!
-Error: SPACE_REPLACE_TAB    (line:   5, col:  18):	Found space when expecting tab
-Norme check failed
 $> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_memchr.c main.c libft.a -o user_exe
 
 = Test 1 ===================================================
@@ -274,11 +231,6 @@ Diff OK :D
 
 = ft_memcmp.c ==================================================================
 $> norminette ft_memcmp.c | grep -E '(Error|Warning)'
-../libft/ft_memcmp.c: Error!
-Error: SPACE_REPLACE_TAB    (line:   5, col:  18):	Found space when expecting tab
-Error: SPACE_REPLACE_TAB    (line:   6, col:  18):	Found space when expecting tab
-Error: EMPTY_LINE_FUNCTION  (line:  10, col:   1):	Empty line in function
-Norme check failed
 $> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_memcmp.c main.c libft.a -o user_exe
 
 = Test 1 ===================================================
@@ -329,9 +281,6 @@ Diff OK :D
 
 = ft_strlen.c ==================================================================
 $> norminette ft_strlen.c | grep -E '(Error|Warning)'
-../libft/ft_strlen.c: Error!
-Error: SPACE_REPLACE_TAB    (line:   5, col:  11):	Found space when expecting tab
-Norme check failed
 $> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_strlen.c main.c libft.a -o user_exe
 
 = Test 1 ===================================================
@@ -367,11 +316,6 @@ Diff OK :D
 
 = ft_strdup.c ==================================================================
 $> norminette ft_strdup.c | grep -E '(Error|Warning)'
-../libft/ft_strdup.c: Error!
-Error: SPACE_REPLACE_TAB    (line:   5, col:  11):	Found space when expecting tab
-Error: SPACE_REPLACE_TAB    (line:   6, col:   9):	Found space when expecting tab
-Error: MISALIGNED_VAR_DECL  (line:   6, col:  10):	Misaligned variable declaration
-Norme check failed
 $> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_strdup.c main.c libft.a -o user_exe
 
 = Test 1 ===================================================
@@ -382,12 +326,6 @@ Diff OK :D
 
 = ft_strlcat.c =================================================================
 $> norminette ft_strlcat.c | grep -E '(Error|Warning)'
-../libft/ft_strlcat.c: Error!
-Error: SPACE_REPLACE_TAB    (line:   5, col:  11):	Found space when expecting tab
-Error: SPACE_REPLACE_TAB    (line:   6, col:  11):	Found space when expecting tab
-Error: SPACE_AFTER_KW       (line:  12, col:   9):	Missing space after keyword
-Error: SPC_BFR_PAR          (line:  12, col:  15):	Missing space before parenthesis (brace/bracket)
-Norme check failed
 $> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_strlcat.c main.c libft.a -o user_exe
 
 = Test 1 ===================================================
@@ -438,9 +376,6 @@ Diff OK :D
 
 = ft_strlcpy.c =================================================================
 $> norminette ft_strlcpy.c | grep -E '(Error|Warning)'
-../libft/ft_strlcpy.c: Error!
-Error: SPACE_REPLACE_TAB    (line:   5, col:  11):	Found space when expecting tab
-Norme check failed
 $> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_strlcpy.c main.c libft.a -o user_exe
 
 = Test 1 ===================================================
@@ -471,9 +406,6 @@ Diff OK :D
 
 = ft_strchr.c ==================================================================
 $> norminette ft_strchr.c | grep -E '(Error|Warning)'
-../libft/ft_strchr.c: Error!
-Error: SPACE_REPLACE_TAB    (line:   5, col:   9):	Found space when expecting tab
-Norme check failed
 $> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_strchr.c main.c libft.a -o user_exe
 
 = Test 1 ===================================================
@@ -509,12 +441,6 @@ Diff OK :D
 
 = ft_strrchr.c =================================================================
 $> norminette ft_strrchr.c | grep -E '(Error|Warning)'
-../libft/ft_strrchr.c: Error!
-Error: SPACE_REPLACE_TAB    (line:   5, col:  11):	Found space when expecting tab
-Error: SPACE_REPLACE_TAB    (line:   6, col:   9):	Found space when expecting tab
-Error: MISALIGNED_VAR_DECL  (line:   6, col:  10):	Misaligned variable declaration
-Error: SPC_BFR_OPERATOR     (line:  12, col:   8):	missing space before operator
-Norme check failed
 $> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_strrchr.c main.c libft.a -o user_exe
 
 = Test 1 ===================================================
@@ -560,20 +486,6 @@ Diff OK :D
 
 = ft_strnstr.c =================================================================
 $> norminette ft_strnstr.c | grep -E '(Error|Warning)'
-../libft/ft_strnstr.c: Error!
-Error: SPACE_REPLACE_TAB    (line:   5, col:  11):	Found space when expecting tab
-Error: SPACE_REPLACE_TAB    (line:   6, col:   9):	Found space when expecting tab
-Error: MISALIGNED_VAR_DECL  (line:   6, col:  10):	Misaligned variable declaration
-Error: SPACE_REPLACE_TAB    (line:   7, col:   9):	Found space when expecting tab
-Error: MISALIGNED_VAR_DECL  (line:   7, col:  10):	Misaligned variable declaration
-Error: EMPTY_LINE_FUNCTION  (line:  11, col:   1):	Empty line in function
-Error: SPACE_AFTER_KW       (line:  15, col:   5):	Missing space after keyword
-Error: SPC_BFR_PAR          (line:  15, col:  10):	Missing space before parenthesis (brace/bracket)
-Error: SPACE_AFTER_KW       (line:  17, col:   9):	Missing space after keyword
-Error: SPC_BFR_PAR          (line:  17, col:  11):	Missing space before parenthesis (brace/bracket)
-Error: NO_SPC_BFR_OPR       (line:  17, col:  32):	extra space before operator
-Error: SPC_AFTER_OPERATOR   (line:  17, col:  32):	missing space after operator
-Norme check failed
 $> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_strnstr.c main.c libft.a -o user_exe
 
 = Test 1 ===================================================
@@ -629,11 +541,6 @@ Diff OK :D
 
 = ft_strncmp.c =================================================================
 $> norminette ft_strncmp.c | grep -E '(Error|Warning)'
-../libft/ft_strncmp.c: Error!
-Error: TOO_MANY_TAB         (line:   9, col:   1):	Extra tabs for indent level
-Error: TOO_MANY_TAB         (line:  10, col:   1):	Extra tabs for indent level
-Error: TOO_MANY_TAB         (line:  11, col:   1):	Extra tabs for indent level
-Norme check failed
 $> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_strncmp.c main.c libft.a -o user_exe
 
 = Test 1 ===================================================
@@ -694,15 +601,6 @@ Diff OK :D
 
 = ft_atoi.c ====================================================================
 $> norminette ft_atoi.c | grep -E '(Error|Warning)'
-../libft/ft_atoi.c: Error!
-Error: SPACE_REPLACE_TAB    (line:   5, col:  13):	Found space when expecting tab
-Error: SPACE_REPLACE_TAB    (line:   6, col:   8):	Found space when expecting tab
-Error: MISALIGNED_VAR_DECL  (line:   6, col:   9):	Misaligned variable declaration
-Error: EOL_OPERATOR         (line:  10, col:  54):	Logic operator at the end of line
-Error: TOO_MANY_TAB         (line:  11, col:  13):	Extra tabs for indent level
-Error: SPC_BFR_OPERATOR     (line:  22, col:  12):	missing space before operator
-Error: SPC_BFR_OPERATOR     (line:  23, col:  12):	missing space before operator
-Norme check failed
 $> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_atoi.c main.c libft.a -o user_exe
 
 = Test 1 ===================================================
@@ -883,9 +781,6 @@ Diff OK :D
 
 = ft_isalnum.c =================================================================
 $> norminette ft_isalnum.c | grep -E '(Error|Warning)'
-../libft/ft_isalnum.c: Error!
-Error: LINE_TOO_LONG        (line:   5, col:  84):	line too long
-Norme check failed
 $> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_isalnum.c main.c libft.a -o user_exe
 
 = Test 1 ===================================================
@@ -1093,11 +988,6 @@ Diff OK :D
 
 = ft_strmapi.c =================================================================
 $> norminette ft_strmapi.c | grep -E '(Error|Warning)'
-../libft/ft_strmapi.c: Error!
-Error: SPACE_REPLACE_TAB    (line:   5, col:   9):	Found space when expecting tab
-Error: SPACE_REPLACE_TAB    (line:   6, col:  11):	Found space when expecting tab
-Error: MISALIGNED_VAR_DECL  (line:   6, col:  12):	Misaligned variable declaration
-Norme check failed
 $> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_strmapi.c main.c libft.a -o user_exe
 
 = Test 1 ===================================================
@@ -1108,13 +998,6 @@ Diff OK :D
 
 = ft_substr.c ==================================================================
 $> norminette ft_substr.c | grep -E '(Error|Warning)'
-../libft/ft_substr.c: Error!
-Error: SPACE_REPLACE_TAB    (line:   5, col:   9):	Found space when expecting tab
-Error: SPACE_REPLACE_TAB    (line:   6, col:   8):	Found space when expecting tab
-Error: MISALIGNED_VAR_DECL  (line:   6, col:   9):	Misaligned variable declaration
-Error: SPC_BFR_OPERATOR     (line:  14, col:   8):	missing space before operator
-Error: SPC_BFR_OPERATOR     (line:  22, col:   9):	missing space before operator
-Norme check failed
 $> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_substr.c main.c libft.a -o user_exe
 
 = Test 1 ===================================================
@@ -1145,14 +1028,6 @@ Diff OK :D
 
 = ft_strjoin.c =================================================================
 $> norminette ft_strjoin.c | grep -E '(Error|Warning)'
-../libft/ft_strjoin.c: Error!
-Error: SPACE_BEFORE_FUNC    (line:   3, col:   5):	space before function name
-Error: SPACE_REPLACE_TAB    (line:   5, col:   8):	Found space when expecting tab
-Error: SPACE_REPLACE_TAB    (line:   6, col:   8):	Found space when expecting tab
-Error: SPACE_REPLACE_TAB    (line:   7, col:   9):	Found space when expecting tab
-Error: MISALIGNED_VAR_DECL  (line:   7, col:  10):	Misaligned variable declaration
-Error: SPC_BFR_OPERATOR     (line:  18, col:   9):	missing space before operator
-Norme check failed
 $> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_strjoin.c main.c libft.a -o user_exe
 
 = Test 1 ===================================================
@@ -1178,12 +1053,6 @@ Diff OK :D
 
 = ft_strtrim.c =================================================================
 $> norminette ft_strtrim.c | grep -E '(Error|Warning)'
-../libft/ft_strtrim.c: Error!
-Error: SPACE_BEFORE_FUNC    (line:   3, col:   5):	space before function name
-Error: SPACE_REPLACE_TAB    (line:   5, col:   8):	Found space when expecting tab
-Error: SPACE_REPLACE_TAB    (line:   6, col:   9):	Found space when expecting tab
-Error: MISALIGNED_VAR_DECL  (line:   6, col:  10):	Misaligned variable declaration
-Norme check failed
 $> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_strtrim.c main.c libft.a -o user_exe
 
 = Test 1 ===================================================
@@ -1215,21 +1084,7 @@ Diff OK :D
 = ft_split.c ===================================================================
 $> norminette ft_split.c | grep -E '(Error|Warning)'
 ../libft/ft_split.c: Error!
-Error: SPACE_REPLACE_TAB    (line:   5, col:   8):	Found space when expecting tab
-Error: SPACE_AFTER_KW       (line:   8, col:   5):	Missing space after keyword
-Error: SPC_BFR_PAR          (line:   8, col:  10):	Missing space before parenthesis (brace/bracket)
-Error: SPACE_BEFORE_FUNC    (line:  16, col:  12):	space before function name
-Error: SPACE_REPLACE_TAB    (line:  18, col:   8):	Found space when expecting tab
-Error: SPACE_AFTER_KW       (line:  21, col:   5):	Missing space after keyword
-Error: SPC_BFR_PAR          (line:  21, col:  10):	Missing space before parenthesis (brace/bracket)
-Error: CONSECUTIVE_NEWLINES (line:  35, col:   1):	Consecutive newlines
-Error: SPACE_REPLACE_TAB    (line:  38, col:   8):	Found space when expecting tab
-Error: SPACE_REPLACE_TAB    (line:  39, col:   8):	Found space when expecting tab
-Error: SPACE_REPLACE_TAB    (line:  40, col:   8):	Found space when expecting tab
-Error: SPACE_REPLACE_TAB    (line:  41, col:   9):	Found space when expecting tab
-Error: MISALIGNED_VAR_DECL  (line:  41, col:  10):	Misaligned variable declaration
-Error: SPC_BFR_OPERATOR     (line:  58, col:  10):	missing space before operator
-Error: TOO_MANY_LINES       (line:  64, col:   1):	Function has more than 25 lines
+Error: TOO_MANY_LINES       (line:  65, col:   1):	Function has more than 25 lines
 Norme check failed
 $> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_split.c main.c libft.a -o user_exe
 
@@ -1267,19 +1122,7 @@ Diff OK :D
 = ft_itoa.c ====================================================================
 $> norminette ft_itoa.c | grep -E '(Error|Warning)'
 ../libft/ft_itoa.c: Error!
-Error: SPACE_REPLACE_TAB    (line:   5, col:   8):	Found space when expecting tab
-Error: SPC_BFR_OPERATOR     (line:   9, col:  10):	missing space before operator
-Error: SPC_BFR_OPERATOR     (line:  12, col:  10):	missing space before operator
-Error: SPACE_REPLACE_TAB    (line:  20, col:   9):	Found space when expecting tab
-Error: SPACE_REPLACE_TAB    (line:  21, col:   8):	Found space when expecting tab
-Error: MISALIGNED_VAR_DECL  (line:  21, col:   9):	Misaligned variable declaration
-Error: SPACE_REPLACE_TAB    (line:  22, col:   8):	Found space when expecting tab
-Error: MISALIGNED_VAR_DECL  (line:  22, col:   9):	Misaligned variable declaration
-Error: SPACE_REPLACE_TAB    (line:  23, col:   9):	Found space when expecting tab
-Error: SPC_BFR_OPERATOR     (line:  31, col:   8):	missing space before operator
-Error: SPC_BFR_OPERATOR     (line:  35, col:  10):	missing space before operator
-Error: SPC_BFR_OPERATOR     (line:  46, col:  10):	missing space before operator
-Error: TOO_MANY_LINES       (line:  50, col:   1):	Function has more than 25 lines
+Error: TOO_MANY_LINES       (line:  53, col:   1):	Function has more than 25 lines
 Norme check failed
 $> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_itoa.c main.c libft.a -o user_exe
 
@@ -1376,9 +1219,6 @@ Diff OK :D
 
 = ft_putstr_fd.c ===============================================================
 $> norminette ft_putstr_fd.c | grep -E '(Error|Warning)'
-../libft/ft_putstr_fd.c: Error!
-Error: SPACE_BEFORE_FUNC    (line:   3, col:   5):	space before function name
-Norme check failed
 $> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_putstr_fd.c main.c libft.a -o user_exe
 
 = Test 1 ===================================================
@@ -1404,9 +1244,6 @@ Diff OK :D
 
 = ft_putendl_fd.c ==============================================================
 $> norminette ft_putendl_fd.c | grep -E '(Error|Warning)'
-../libft/ft_putendl_fd.c: Error!
-Error: SPACE_BEFORE_FUNC    (line:   3, col:   5):	space before function name
-Norme check failed
 $> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_putendl_fd.c main.c libft.a -o user_exe
 
 = Test 1 ===================================================
@@ -1432,10 +1269,6 @@ Diff OK :D
 
 = ft_putnbr_fd.c ===============================================================
 $> norminette ft_putnbr_fd.c | grep -E '(Error|Warning)'
-../libft/ft_putnbr_fd.c: Error!
-Error: SPACE_BEFORE_FUNC    (line:   3, col:   5):	space before function name
-Error: SPACE_REPLACE_TAB    (line:   5, col:   9):	Found space when expecting tab
-Norme check failed
 $> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_putnbr_fd.c main.c libft.a -o user_exe
 
 = Test 1 ===================================================

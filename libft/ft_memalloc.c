@@ -2,9 +2,14 @@
 
 void	*ft_memalloc(size_t nmb)
 {
-	void *mem;
+	void	*mem;
 
-	if ((mem = malloc(nmb)))
-		ft_bzero(mem, nmb);
+	mem = malloc(nmb);
+	if (mem == NULL)
+	{
+		free(mem);
+		return (NULL);
+	}
+	ft_bzero(mem, nmb);
 	return (mem);
 }

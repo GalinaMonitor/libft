@@ -2,14 +2,14 @@
 
 void	*ft_memset(void *s1, int c, size_t nmb)
 {
-	unsigned char *cast;
+	unsigned char	*cast;
 
 	cast = (unsigned char *)s1;
-	while(nmb > 0)
+	while (nmb > 0)
 	{
 		*cast = (unsigned char)c;
 		cast++;
 		nmb--;
 	}
-	return(s1);
+	return (s1);
 }

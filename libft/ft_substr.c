@@ -10,7 +10,10 @@ char	*ft_substr(char const *str, unsigned int start, size_t len)
 		return (ft_strdup(""));
 	dest = ft_strnew(len);
 	if (dest == NULL)
+	{
+		free(dest);
 		return (NULL);
+	}
 	str += start;
 	while (*str && len > 0)
 	{

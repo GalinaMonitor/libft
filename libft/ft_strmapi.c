@@ -8,7 +8,10 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	ind = 0;
 	result = ft_strnew(ft_strlen(s));
 	if (result == NULL)
+	{
+		free(result);
 		return (NULL);
+	}
 	while (s[ind])
 	{
 		result[ind] = f(ind, s[ind]);

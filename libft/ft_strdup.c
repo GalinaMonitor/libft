@@ -8,7 +8,10 @@ char	*ft_strdup(const char *s)
 	size = ft_strlen(s);
 	str = ft_strnew(size);
 	if (str == NULL)
+	{
+		free(str);
 		return (NULL);
+	}
 	ft_strlcpy(str, s, size + 1);
 	return (str);
 }
