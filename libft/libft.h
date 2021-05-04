@@ -4,7 +4,7 @@
 # include <unistd.h>
 # include <stdio.h>
 # include <stdlib.h>
-# include <fcntl.h>
+// # include <fcntl.h>
 
 void	ft_bzero(void *s1, size_t nmb);
 int		ft_isalnum(int c);
@@ -16,11 +16,11 @@ int		ft_isprint(int c);
 int		ft_isspace(int c);
 
 void	*ft_memalloc(size_t nmb);
-void	*ft_memchr(void* src, int c, size_t nmb);
-int 	ft_memcmp(const void *src, const void *src2, size_t nmb);
+void	*ft_memchr(void *src, int c, size_t nmb);
+int		ft_memcmp(const void *src1, const void *src2, size_t nmb);
 void	*ft_memcpy(void *dest, const void *src, size_t nmb);
 void	*ft_memccpy(void *dest, const void *src, int c, size_t nmb);
-void	*ft_memmove(void* dest, const void* src, size_t nmb);
+void	*ft_memmove(void *dest, const void *src, size_t nmb);
 void	*ft_memset(void *s1, int c, size_t nmb);
 void	*ft_calloc(size_t nmemb, size_t size);
 
@@ -37,6 +37,8 @@ char	*ft_strrchr(const char *s, int c);
 char	*ft_strnstr(const char *big, const char *little, size_t len);
 char	*ft_strnew(size_t count);
 
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+char	*ft_strtrim(char const *s1, char const *set);
 int		ft_atoi(const char *str);
 char	*ft_itoa(int n);
 char	*ft_strjoin(char const *s1, char const *s2);

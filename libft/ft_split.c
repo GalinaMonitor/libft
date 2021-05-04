@@ -2,10 +2,10 @@
 
 static int	ft_char_count(char const *s, char c)
 {
-	int count;
+	int	count;
 
 	count = 0;
-	while(*s != c && *s)
+	while (*s != c && *s)
 	{
 		s++;
 		count++;
@@ -13,12 +13,12 @@ static int	ft_char_count(char const *s, char c)
 	return (count);
 }
 
-static	int ft_words_count(char const *s, char c)
+static int	ft_words_count(char const *s, char c)
 {
-	int count;
+	int	count;
 
 	count = 0;
-	while(*s)
+	while (*s)
 	{
 		if (*s != c)
 		{
@@ -32,13 +32,12 @@ static	int ft_words_count(char const *s, char c)
 	return (count + 1);
 }
 
-
 char	**ft_split(char const *s, char c)
 {
-	int words;
-	int ind;
-	int word_size;
-	char **mass;
+	int		words;
+	int		ind;
+	int		word_size;
+	char	**mass;
 
 	ind = 0;
 	words = ft_words_count(s, c);
@@ -54,8 +53,8 @@ char	**ft_split(char const *s, char c)
 		mass[ind] = ft_strnew(word_size);
 		if (mass[ind] == NULL)
 			return (NULL);
-		ft_strlcpy(mass[ind], s, word_size);
-		s+= word_size;
+		ft_strlcpy(mass[ind], s, word_size + 1);
+		s += word_size;
 		ind++;
 		words--;
 	}

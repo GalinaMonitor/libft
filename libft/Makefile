@@ -2,10 +2,12 @@ NAME = libft.a
 
 CC = gcc
 
-FLAGS = -Wall -Werror -Wextra -O2 -c
+FLAGS = -Wall -Werror -Wextra -O2
 
 SOURCES_LIST = ft_memset.c\
 	ft_bzero.c\
+	ft_calloc.c\
+	ft_memalloc.c\
 	ft_memcpy.c\
 	ft_memccpy.c\
 	ft_memmove.c\
@@ -14,6 +16,7 @@ SOURCES_LIST = ft_memset.c\
 	ft_strlen.c\
 	ft_strdup.c\
 	ft_strlcat.c\
+	ft_strlcpy.c\
 	ft_strchr.c\
 	ft_strrchr.c\
 	ft_strnstr.c\
@@ -29,6 +32,7 @@ SOURCES_LIST = ft_memset.c\
 	ft_memalloc.c\
 	ft_strnew.c\
 	ft_strmapi.c\
+	ft_substr.c\
 	ft_strjoin.c\
 	ft_strtrim.c\
 	ft_split.c\
@@ -51,7 +55,7 @@ $(NAME): $(OBJECTS)
 	ar rcs $(NAME) $?
 
 %.o : %.c
-	$(CC) $(FLAGS) $< -o $@ -MD
+	$(CC) $(FLAGS) -c $< -o $@ -MD
 
 include $(wildcard $(D_FILES))
 

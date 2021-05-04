@@ -1,20 +1,19 @@
 #include "libft.h"
 
-char	*ft_strmapi(char const *s, char (*f)(size_t, char))
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	char *result;
-	size_t ind;
+	char	*result;
+	size_t	ind;
 
 	ind = 0;
-	result = NULL;
-	if (s && f && (result = ft_strnew(ft_strlen(s))))
+	result = ft_strnew(ft_strlen(s));
+	if (result == NULL)
+		return (NULL);
+	while (s[ind])
 	{
-		while (s[ind])
-		{
-			result[ind] = f(ind, s[ind]);
-			ind++;
-		}
-		result[ind] = '\0';
+		result[ind] = f(ind, s[ind]);
+		ind++;
 	}
+	result[ind] = '\0';
 	return (result);
 }

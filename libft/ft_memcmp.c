@@ -1,15 +1,20 @@
 #include "libft.h"
 
-int	ft_memcmp(const void *src, const void *src2, size_t nmb)
+int	ft_memcmp(const void *src1, const void *src2, size_t nmb)
 {
-	nmb--;
+	unsigned char *src1_cast;
+	unsigned char *src2_cast;
+
+	src1_cast = (unsigned char *)src1;
+	src2_cast = (unsigned char *)src2;
+
 	while (nmb > 0)
 	{
-		if (*((unsigned char *)src) != *((unsigned char *)src2))
-			return (*((unsigned char *)src) - *((unsigned char *)src2));
+		if (*src1_cast != *src2_cast)
+			return (*src1_cast - *src2_cast);
 		nmb--;
-		src++;
-		src2++;
+		src1_cast++;
+		src2_cast++;
 	}
 	return (0);
 }

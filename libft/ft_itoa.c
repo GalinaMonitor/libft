@@ -49,9 +49,9 @@ char	*ft_itoa(int nbr)
 	return (word);
 }
 
-int main ()
-{
-	char *check = ft_itoa(-2147483648);
-	printf("%s\n", check);
-	return 0;
-}
+// int main ()
+// {
+// 	char *check = ft_itoa(-2147483648);
+// 	printf("%s\n", check);
+// 	return 0;
+// }

@@ -2,8 +2,8 @@
 
 char	*ft_substr(char const *str, unsigned int start, size_t len)
 {
-	char *dest;
-	int temp;
+	char	*dest;
+	int		temp;
 
 	temp = len;
 	if (len <= 0 || start >= ft_strlen(str))
@@ -11,7 +11,7 @@ char	*ft_substr(char const *str, unsigned int start, size_t len)
 	dest = ft_strnew(len);
 	if (dest == NULL)
 		return (NULL);
-	str+= start;
+	str += start;
 	while (*str && len > 0)
 	{
 		*dest = *str;
@@ -19,6 +19,6 @@ char	*ft_substr(char const *str, unsigned int start, size_t len)
 		str++;
 		dest++;
 	}
-	dest-= temp;
+	dest -= temp;
 	return (dest);
 }

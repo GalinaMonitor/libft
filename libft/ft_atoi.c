@@ -1,8 +1,10 @@
+/* Function makes char from int. Delete non-printable characters. */
+/* Works as original atoi(--++45 = 0; -45 = -45) */
 #include "libft.h"
 
 int	ft_atoi(const char *str)
 {
-	long int nbr;
+	long nbr;
 	int min;
 
 	min = 1;

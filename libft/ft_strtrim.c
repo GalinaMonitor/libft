@@ -1,9 +1,9 @@
 #include "libft.h"
 
-char *ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	int len;
-	char *result;
+	int		len;
+	char	*result;
 
 	while (*s1 && ft_strchr(set, *s1))
 		s1++;
