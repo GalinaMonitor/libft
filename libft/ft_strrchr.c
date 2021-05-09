@@ -1,3 +1,13 @@
+/*
+**@file					ft_strrchr.c
+**@author				Gmonitor (gmonitor@student.21-school.ru)
+**@date					2021-05-10
+**
+**@brief				Function searches the last c char in the string
+**
+**@used_functions		ft_strlen
+**						!No protection from input NULL!
+*/
 #include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)

@@ -45,26 +45,44 @@ SOURCES_LIST = ft_memset.c\
 	ft_tolower.c\
 	ft_isspace.c\
 
-OBJECTS = $(patsubst %.c, %.o, $(SOURCES_LIST))
+SOURCES_LIST_B = ft_lstnew.c\
+	ft_lstadd_front.c\
+	ft_lstsize.c\
+	ft_lstlast.c\
+	ft_lstadd_back.c\
+	ft_lstclear.c\
+	ft_lstdelone.c\
+	ft_lstiter.c\
+	ft_lstmap.c\
 
-D_FILES = $(patsubst %.c, %.d, $(SOURCES_LIST))
+OBJECTS = $(patsubst %.c, %.o, $(SOURCES_LIST))
+OBJECTS_B = $(patsubst %.c, %.o, $(SOURCES_LIST_B))
+
+
+D_FILES = $(patsubst %.c, %.d, $(SOURCES_LIST) $(SOURCES_LIST_B))
 
 all: $(NAME)
 
-$(NAME): $(OBJECTS)
-	ar rcs $(NAME) $?
+$(NAME): $(OBJECTS) $(OBJECTS_B)
+	@ar rcs $(NAME) $?
+	@echo "libft.a is ready to use"
 
 %.o : %.c
-	$(CC) $(FLAGS) -c $< -o $@ -MD
+	@$(CC) $(FLAGS) -c $< -o $@ -MD
 
 include $(wildcard $(D_FILES))
 
+bonus:
+	@make OBJECTS="$(OBJECTS_B)" all
+	@echo "Libft Bonus Done!"
+
 clean:
-	rm -f $(OBJECTS) $(D_FILES)
+	@rm -f $(OBJECTS_B) $(OBJECTS) $(D_FILES)
+	@echo "Annihilation success"
 
 fclean: clean
-	rm -f $(NAME)
+	@rm -f $(NAME)
 
 re: fclean all
 
-.PHONY : re all fclean clean
+.PHONY : re all fclean clean bonus

@@ -1,3 +1,13 @@
+/*
+**@file					ft_strlcat.c
+**@author				Gmonitor (gmonitor@student.21-school.ru)
+**@date					2021-05-10
+**
+**@brief				Function concatenate two strings
+**
+**@used_functions		ft_strlen, ft_memchr, ft_strlcpy
+**						!No protection from input NULL!
+*/
 #include "libft.h"
 
 size_t	ft_strlcat(char *dest, const char *src, size_t size)

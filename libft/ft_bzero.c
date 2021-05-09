@@ -1,3 +1,13 @@
+/*
+**@file					ft_bzero.c
+**@author				Gmonitor (gmonitor@student.21-school.ru)
+**@date					2021-05-10
+**
+**@brief				Fills string with "\0"
+**
+**@used_functions		{none}
+**						!No protection from input NULL!
+*/
 #include "libft.h"
 
 void	ft_bzero(void *s1, size_t nmb)

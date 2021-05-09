@@ -1,3 +1,13 @@
+/*
+**@file					ft_toupper.c
+**@author				Gmonitor (gmonitor@student.21-school.ru)
+**@date					2021-05-10
+**
+**@brief				Text-transform: uppercase
+**
+**@used_functions		{none}
+**						!No protection from input NULL!
+*/
 #include "libft.h"
 
 int	ft_toupper(int str)

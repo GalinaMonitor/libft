@@ -1,3 +1,16 @@
+/*
+**@file					ft_substr.c
+**@author				Gmonitor (gmonitor@student.21-school.ru)
+**@date					2021-05-10
+**
+**@brief				Allocates (with malloc(3)) and returns a substring
+						from the string ’s’.
+						The substring begins at index ’start’ and is of
+						maximum size ’len’.
+**
+**@used_functions		ft_strdup, ft_strnew
+**						!No protection from input NULL!
+*/
 #include "libft.h"
 
 char	*ft_substr(char const *str, unsigned int start, size_t len)
@@ -10,10 +23,7 @@ char	*ft_substr(char const *str, unsigned int start, size_t len)
 		return (ft_strdup(""));
 	dest = ft_strnew(len);
 	if (dest == NULL)
-	{
-		free(dest);
 		return (NULL);
-	}
 	str += start;
 	while (*str && len > 0)
 	{

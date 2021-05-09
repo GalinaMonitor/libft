@@ -1,3 +1,15 @@
+/*
+**@file					ft_strtrim.c
+**@author				Gmonitor (gmonitor@student.21-school.ru)
+**@date					2021-05-10
+**
+**@brief				Allocates (with malloc(3)) and returns a copy of
+**						’s1’ with the characters specified in ’set’ removed
+**						from the beginning and the end of the string.
+**
+**@used_functions		ft_strchr, ft_strlen, ft_substr
+**						!No protection from input NULL!
+*/
 #include "libft.h"
 
 char	*ft_strtrim(char const *s1, char const *set)

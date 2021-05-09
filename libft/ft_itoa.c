@@ -1,5 +1,22 @@
+/*
+**@file					ft_itoa.c
+**@author				Gmonitor (gmonitor@student.21-school.ru)
+**@date					2021-05-10
+**
+**@brief				Function makes char from int
+**
+**@used_functions		ft_intlen, ft_strnew
+**						!No protection from input NULL!
+*/
+
 #include "libft.h"
 
+/*
+**@brief			Function counts digits
+**
+**@param			n
+**@return			int
+*/
 static int	ft_intlen(long n)
 {
 	int	count;
@@ -27,10 +44,7 @@ char	*ft_itoa(int nbr)
 	count = ft_intlen(n);
 	word = ft_strnew(count + 1);
 	if (word == NULL)
-	{
-		free(word);
 		return (NULL);
-	}
 	ind += count - 1;
 	if (n < 0)
 	{

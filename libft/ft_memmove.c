@@ -1,3 +1,13 @@
+/*
+**@file					ft_memmove.c
+**@author				Gmonitor (gmonitor@student.21-school.ru)
+**@date					2021-05-10
+**
+**@brief				Function copies nmb cells from src to dest. Pointers may overlap
+**
+**@used_functions		{none}
+**						!No protection from input NULL!
+*/
 #include "libft.h"
 
 void	*ft_memmove(void *dest, const void *src, size_t nmb)
