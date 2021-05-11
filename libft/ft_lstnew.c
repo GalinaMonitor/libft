@@ -9,13 +9,13 @@
 **						variable ’next’ is initialized to NULL.
 **
 **@used_functions		malloc
-**						!No protection from input NULL!
 */
 #include "libft.h"
 
 t_list	*ft_lstnew(void *content)
 {
-	t_list *list;
+	t_list	*list;
+
 	list = malloc(sizeof(t_list));
 	if (list == NULL)
 		return (NULL);

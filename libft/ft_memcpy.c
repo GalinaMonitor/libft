@@ -6,7 +6,6 @@
 **@brief				Function copies nmb cells from src to dest. Pointers mustn't overlap
 **
 **@used_functions		{none}
-**						!No protection from input NULL!
 */
 #include "libft.h"
 

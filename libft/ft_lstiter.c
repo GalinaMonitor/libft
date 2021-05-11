@@ -7,16 +7,15 @@
 **						’f’ to the content of each element.
 **
 **@used_functions		{none}
-**						!No protection from input NULL!
 */
 #include "libft.h"
 
-void ft_lstiter(t_list *lst, void (*f)(void *))
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
 	if (lst != NULL)
 	{
 		(*f)(lst->content);
 		if (lst->next)
-			return(ft_lstiter(lst->next, f));
+			return (ft_lstiter(lst->next, f));
 	}
 }

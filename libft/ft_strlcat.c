@@ -6,7 +6,6 @@
 **@brief				Function concatenate two strings
 **
 **@used_functions		ft_strlen, ft_memchr, ft_strlcpy
-**						!No protection from input NULL!
 */
 #include "libft.h"
 

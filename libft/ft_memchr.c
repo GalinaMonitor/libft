@@ -3,10 +3,10 @@
 **@author				Gmonitor (gmonitor@student.21-school.ru)
 **@date					2021-05-10
 **
-**@brief				Function checks nmb cells and tries to find char c. Function can find '\0'
+**@brief				Function checks nmb cells and tries to find char c.
+**						Function can find '\0'
 **
 **@used_functions		{none}
-**						!No protection from input NULL!
 */
 #include "libft.h"
 

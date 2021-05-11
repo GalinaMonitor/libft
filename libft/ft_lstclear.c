@@ -3,15 +3,15 @@
 **@author				Gmonitor (gmonitor@student.21-school.ru)
 **@date					2021-05-10
 **
-**@brief				Deletes and frees the given element and every successor of that element,
-**						using the function ’del’ and free(3). Finally, the pointer to the list must be set to NULL.
+**@brief				Deletes and frees the given element and every successor
+**						of that element, using the function ’del’ and free(3).
+**						Finally, the pointer to the list must be set to NULL.
 **
 **@used_functions		ft_lstdelone
-**						!No protection from input NULL!
 */
 #include "libft.h"
 
-void ft_lstclear(t_list **lst, void (*del)(void*))
+void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
 	if (*lst != NULL)
 	{

@@ -7,8 +7,7 @@
 **						string ’s’ to create a new string (with malloc(3))
 **						resulting from successive applications of ’f’.
 **
-**@used_functions		ft_strnew, ft_strlen
-**						!No protection from input NULL!
+**@used_functions		ft_calloc, ft_strlen
 */
 #include "libft.h"
 
@@ -17,8 +16,10 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char	*result;
 	size_t	ind;
 
+	if (s == NULL || f == NULL)
+		return (NULL);
 	ind = 0;
-	result = ft_strnew(ft_strlen(s));
+	result = ft_calloc(ft_strlen(s) + 1, sizeof(char));
 	if (result == NULL)
 		return (NULL);
 	while (s[ind])

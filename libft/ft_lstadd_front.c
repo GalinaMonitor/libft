@@ -6,7 +6,6 @@
 **@brief				Function adds the element ’new’ at the beginning of the list
 **
 **@used_functions		{none}
-**						!No protection from input NULL!
 */
 #include "libft.h"
 

@@ -6,7 +6,6 @@
 # include <stdlib.h>
 # include <fcntl.h>
 
-
 void	ft_bzero(void *s1, size_t nmb);
 int		ft_isalnum(int c);
 int		ft_isalpha(int c);
@@ -14,9 +13,7 @@ int		ft_isascii(int c);
 int		ft_isdigit(int c);
 int		ft_isalnum(int c);
 int		ft_isprint(int c);
-int		ft_isspace(int c);
 
-void	*ft_memalloc(size_t nmb);
 void	*ft_memchr(void *src, int c, size_t nmb);
 int		ft_memcmp(const void *src1, const void *src2, size_t nmb);
 void	*ft_memcpy(void *dest, const void *src, size_t nmb);
@@ -36,7 +33,6 @@ int		ft_strncmp(const char *first, const char *second, size_t nmb);
 size_t	ft_strlcpy(char *dest, const char *src, size_t size);
 char	*ft_strrchr(const char *s, int c);
 char	*ft_strnstr(const char *big, const char *little, size_t len);
-char	*ft_strnew(size_t count);
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char	*ft_strtrim(char const *s1, char const *set);
@@ -50,11 +46,11 @@ int		ft_toupper(int str);
 char	*ft_strdup(const char *s);
 char	**ft_split(char const *s, char c);
 
-typedef struct	s_list
+typedef struct s_list
 {
-	void *content;
-	struct s_list *next;
-}				t_list;
+	void			*content;
+	struct s_list	*next;
+}					t_list;
 
 t_list	*ft_lstnew(void *content);
 void	ft_lstadd_front(t_list **alst, t_list *new);

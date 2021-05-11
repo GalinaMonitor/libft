@@ -6,7 +6,6 @@
 **@brief				Function makes char from int. Delete non-printable characters.
 **						Works as original atoi(--++45 = 0; -45 = -45)
 **@used_functions		{none}
-**						!No protection from input NULL!
 */
 
 #include "libft.h"

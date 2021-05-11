@@ -7,7 +7,6 @@
 **						returns pointer on the next char. Pointers mustn't overlap
 **
 **@used_functions		{none}
-**						!No protection from input NULL!
 */
 #include "libft.h"
 

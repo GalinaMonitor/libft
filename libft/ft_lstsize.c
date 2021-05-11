@@ -6,17 +6,16 @@
 **@brief 				Function counts the number of elements in a list
 **
 **@used_functions		{none}
-**						!No protection from input NULL!
 */
 #include "libft.h"
 
-int ft_lstsize(t_list *lst)
+int	ft_lstsize(t_list *lst)
 {
 	if (lst != NULL)
 	{
 		if (lst->next)
 		{
-			return(ft_lstsize(lst->next) + 1);
+			return (ft_lstsize(lst->next) + 1);
 		}
 		return (1);
 	}

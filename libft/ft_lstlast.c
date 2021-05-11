@@ -6,14 +6,13 @@
 **@brief				Function returns the last element of the list
 **
 **@used_functions		{none}
-**						!No protection from input NULL!
 */
 #include "libft.h"
 
-t_list *ft_lstlast(t_list *lst)
+t_list	*ft_lstlast(t_list *lst)
 {
 	if (lst != NULL)
 		if (lst->next)
-			return(ft_lstlast(lst->next));
+			return (ft_lstlast(lst->next));
 	return (lst);
 }

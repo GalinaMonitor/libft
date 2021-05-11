@@ -6,7 +6,6 @@
 **@brief				Function check if c is ASCII
 **
 **@used_functions		{none}
-**						!No protection from input NULL!
 */
 
 #include "libft.h"

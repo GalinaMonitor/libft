@@ -6,7 +6,6 @@
 **@brief				Function prints nb dependent on fd
 **
 **@used_functions		ft_putchar_fd
-**						!No protection from input NULL!
 */
 
 #include "libft.h"

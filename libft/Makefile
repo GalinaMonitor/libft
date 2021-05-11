@@ -2,12 +2,11 @@ NAME = libft.a
 
 CC = gcc
 
-FLAGS = -Wall -Werror -Wextra -O2
+FLAGS = -Wall -Werror -Wextra
 
 SOURCES_LIST = ft_memset.c\
 	ft_bzero.c\
 	ft_calloc.c\
-	ft_memalloc.c\
 	ft_memcpy.c\
 	ft_memccpy.c\
 	ft_memmove.c\
@@ -29,8 +28,6 @@ SOURCES_LIST = ft_memset.c\
 	ft_isprint.c\
 	ft_toupper.c\
 	ft_tolower.c\
-	ft_memalloc.c\
-	ft_strnew.c\
 	ft_strmapi.c\
 	ft_substr.c\
 	ft_strjoin.c\
@@ -43,7 +40,6 @@ SOURCES_LIST = ft_memset.c\
 	ft_putnbr_fd.c\
 	ft_toupper.c\
 	ft_tolower.c\
-	ft_isspace.c\
 
 SOURCES_LIST_B = ft_lstnew.c\
 	ft_lstadd_front.c\
@@ -63,7 +59,7 @@ D_FILES = $(patsubst %.c, %.d, $(SOURCES_LIST) $(SOURCES_LIST_B))
 
 all: $(NAME)
 
-$(NAME): $(OBJECTS) $(OBJECTS_B)
+$(NAME): $(OBJECTS)
 	@ar rcs $(NAME) $?
 	@echo "libft.a is ready to use"
 
@@ -72,8 +68,8 @@ $(NAME): $(OBJECTS) $(OBJECTS_B)
 
 include $(wildcard $(D_FILES))
 
-bonus:
-	@make OBJECTS="$(OBJECTS_B)" all
+bonus: $(OBJECTS_B)
+	@ar rcs $(NAME) $?
 	@echo "Libft Bonus Done!"
 
 clean:

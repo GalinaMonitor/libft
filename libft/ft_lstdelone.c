@@ -9,7 +9,6 @@
 **						The memory of ’next’ must not be freed.
 **
 **@used_functions		free
-**						!No protection from input NULL!
 */
 #include "libft.h"
 

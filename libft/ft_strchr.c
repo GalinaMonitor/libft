@@ -6,7 +6,6 @@
 **@brief				Function checks s and tries to find char c
 **
 **@used_functions		{none}
-**						!No protection from input NULL!
 */
 
 #include "libft.h"
@@ -18,11 +17,11 @@ char	*ft_strchr(const char *s, int c)
 	str = (char *)s;
 	while (*str)
 	{
-		if (*str == c)
+		if (*str == (char)c)
 			return (str);
 		str++;
 	}
-	if (*str == c)
+	if (*str == (char)c)
 		return (str);
 	return (NULL);
 }

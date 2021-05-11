@@ -8,8 +8,7 @@
 **						character ’c’ as a delimiter. The array must be
 **						ended by a NULL pointer.
 **
-**@used_functions		ft_char_count, ft_words_count, ft_clean, ft_strnew, ft_strlcpy
-**						!No protection from input NULL!
+**@used_functions		ft_char_count, ft_words_count, ft_clean, ft_calloc, ft_strlcpy
 */
 
 #include "libft.h"
@@ -57,7 +56,7 @@ static int	ft_words_count(char const *s, char c)
 		else
 			s++;
 	}
-	return (count + 1);
+	return (count);
 }
 
 /*
@@ -78,32 +77,43 @@ static void	ft_clean(char **mass)
 	free(mass);
 }
 
+static char const	*ft_words_creator(char **mass,
+		char const *s, char c, int ind)
+{
+	int		word_size;
+
+	while (*s == c)
+		s++;
+	word_size = ft_char_count(s, c);
+	mass[ind] = ft_calloc(word_size + 1, sizeof(char));
+	if (mass[ind] == NULL)
+		return (NULL);
+	ft_strlcpy(mass[ind++], s, word_size + 1);
+	s += word_size;
+	return (s);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	int		words;
 	int		ind;
-	int		word_size;
 	char	**mass;
 
+	if (s == NULL)
+		return (NULL);
 	ind = 0;
 	words = ft_words_count(s, c);
-	mass = (char **)malloc(sizeof(char *) * words + 1);
+	mass = (char **)malloc(sizeof(char *) * (words + 1));
 	if (mass == NULL)
 		return (NULL);
-	while (words-- > 1)
+	while (words-- > 0)
 	{
-		if (*s == c)
-			while (*s == c)
-				s++;
-		word_size = ft_char_count(s, c);
-		mass[ind] = ft_strnew(word_size);
-		if (mass[ind] == NULL)
+		s = ft_words_creator(mass, s, c, ind);
+		if (s == NULL)
 		{
 			ft_clean(mass);
 			return (NULL);
 		}
-		ft_strlcpy(mass[ind], s, word_size + 1);
-		s += word_size;
 		ind++;
 	}
 	mass[ind] = NULL;

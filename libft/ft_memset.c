@@ -6,7 +6,6 @@
 **@brief				Function fills nmb cells with c
 **
 **@used_functions		{none}
-**						!No protection from input NULL!
 */
 #include "libft.h"
 

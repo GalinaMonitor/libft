@@ -6,7 +6,6 @@
 **@brief				Text-transform: uppercase
 **
 **@used_functions		{none}
-**						!No protection from input NULL!
 */
 #include "libft.h"
 

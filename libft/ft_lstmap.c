@@ -10,11 +10,10 @@
 **						delete the content of an element if needed
 **
 **@used_functions		ft_lstnew, ft_lstclear, ft_lstadd_back
-**						!No protection from input NULL!
 */
 #include "libft.h"
 
-t_list *ft_lstmap(t_list *lst, void *(*f)(void *),void (*del)(void *))
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*elem;
 	t_list	*new_lst;

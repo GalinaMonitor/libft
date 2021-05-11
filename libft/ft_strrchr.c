@@ -6,7 +6,6 @@
 **@brief				Function searches the last c char in the string
 **
 **@used_functions		ft_strlen
-**						!No protection from input NULL!
 */
 #include "libft.h"
 

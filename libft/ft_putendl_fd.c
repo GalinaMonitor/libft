@@ -6,12 +6,13 @@
 **@brief				Function prints c and '\n' dependent on fd
 **
 **@used_functions		ft_putstr_fd, ft_putchar_fd
-**						!No protection from input NULL!
 */
 #include "libft.h"
 
 void	ft_putendl_fd(char *s, int fd)
 {
+	if (s == NULL)
+		return ;
 	ft_putstr_fd(s, fd);
 	ft_putchar_fd('\n', fd);
 }

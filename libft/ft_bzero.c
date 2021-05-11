@@ -6,7 +6,6 @@
 **@brief				Fills string with "\0"
 **
 **@used_functions		{none}
-**						!No protection from input NULL!
 */
 #include "libft.h"
 

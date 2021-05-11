@@ -1,8 +1,0 @@
-test
-*.o
-*.swp
-eval-libft
-Libftest
-libft-unit-test
-.DS_Store
-cfg

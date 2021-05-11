@@ -3,12 +3,13 @@
 **@author				Gmonitor (gmonitor@student.21-school.ru)
 **@date					2021-05-10
 **
-**@brief				Function locates the first occurrence of the null-terminated string little in the string big,
-**						where not more than len characters are searched. Characters that appear after a `\0' character
+**@brief				Function locates the first occurrence of the
+**						null-terminated string little in the string big,
+**						where not more than len characters are searched.
+**						Characters that appear after a `\0' character
 **						are not searched.
 **
 **@used_functions		ft_strlen, ft_strncmp
-**						!No protection from input NULL!
 */
 #include "libft.h"
 

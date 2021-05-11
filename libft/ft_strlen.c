@@ -6,7 +6,6 @@
 **@brief				Function counts length of the string
 **
 **@used_functions		{none}
-**						!No protection from input NULL!
 */
 #include "libft.h"
 

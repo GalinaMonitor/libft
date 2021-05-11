@@ -6,12 +6,13 @@
 **@brief				Function prints c dependent on fd
 **
 **@used_functions		write, ft_strlen
-**						!No protection from input NULL!
 */
 
 #include "libft.h"
 
 void	ft_putstr_fd(char *s, int fd)
 {
+	if (s == NULL)
+		return ;
 	write(fd, s, ft_strlen(s));
 }

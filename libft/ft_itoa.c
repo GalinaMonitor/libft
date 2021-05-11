@@ -6,7 +6,6 @@
 **@brief				Function makes char from int
 **
 **@used_functions		ft_intlen, ft_strnew
-**						!No protection from input NULL!
 */
 
 #include "libft.h"
@@ -32,6 +31,17 @@ static int	ft_intlen(long n)
 	return (count);
 }
 
+char	*ft_itoa_unsigned(char *word, int ind, long n)
+{
+	while (n > 0)
+	{
+		word[ind] = n % 10 + 48;
+		n /= 10;
+		ind--;
+	}
+	return (word);
+}
+
 char	*ft_itoa(int nbr)
 {
 	long	n;
@@ -42,7 +52,7 @@ char	*ft_itoa(int nbr)
 	n = (long)nbr;
 	ind = 0;
 	count = ft_intlen(n);
-	word = ft_strnew(count + 1);
+	word = ft_calloc(count + 2, sizeof(char));
 	if (word == NULL)
 		return (NULL);
 	ind += count - 1;
@@ -57,11 +67,5 @@ char	*ft_itoa(int nbr)
 		word[0] = '0';
 		return (word);
 	}
-	while (n > 0)
-	{
-		word[ind] = n % 10 + 48;
-		n /= 10;
-		ind--;
-	}
-	return (word);
+	return (ft_itoa_unsigned(word, ind, n));
 }

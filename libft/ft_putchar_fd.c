@@ -6,7 +6,6 @@
 **@brief				Function prints c dependent on fd
 **
 **@used_functions		write
-**						!No protection from input NULL!
 */
 #include "libft.h"
 

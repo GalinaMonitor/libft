@@ -6,7 +6,6 @@
 **@brief				Function allocates nmemb cells of size and fills them with '\0'
 **
 **@used_functions		ft_bzero, malloc
-**						!No protection from input NULL!
 */
 
 #include "libft.h"
