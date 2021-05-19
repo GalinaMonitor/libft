@@ -20,9 +20,9 @@
 **@param			c
 **@return			int
 */
-static int	ft_char_count(char const *s, char c)
+static int ft_char_count(char const *s, char c)
 {
-	int	count;
+	int count;
 
 	count = 0;
 	while (*s != c && *s)
@@ -40,9 +40,9 @@ static int	ft_char_count(char const *s, char c)
 **@param			c
 **@return			int
 */
-static int	ft_words_count(char const *s, char c)
+static int ft_words_count(char const *s, char c)
 {
-	int	count;
+	int count;
 
 	count = 0;
 	while (*s)
@@ -64,9 +64,9 @@ static int	ft_words_count(char const *s, char c)
 **
 **@param			mass
 */
-static void	ft_clean(char **mass)
+static void ft_clean(char **mass)
 {
-	int	ind;
+	int ind;
 
 	ind = 0;
 	while (mass[ind])
@@ -77,10 +77,19 @@ static void	ft_clean(char **mass)
 	free(mass);
 }
 
-static char const	*ft_words_creator(char **mass,
-		char const *s, char c, int ind)
+/*
+**@brief			Function allocates mem for words and strlcpy
+**
+**@param			mass
+**@param			s
+**@param			c
+**@param			ind
+**@return			char const*
+*/
+static char const *ft_words_creator(char **mass,
+									char const *s, char c, int ind)
 {
-	int		word_size;
+	int word_size;
 
 	while (*s == c)
 		s++;
@@ -93,11 +102,11 @@ static char const	*ft_words_creator(char **mass,
 	return (s);
 }
 
-char	**ft_split(char const *s, char c)
+char **ft_split(char const *s, char c)
 {
-	int		words;
-	int		ind;
-	char	**mass;
+	int words;
+	int ind;
+	char **mass;
 
 	if (s == NULL)
 		return (NULL);

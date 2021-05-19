@@ -69,3 +69,9 @@ char	*ft_itoa(int nbr)
 	}
 	return (ft_itoa_unsigned(word, ind, n));
 }
+
+int main()
+{
+	printf("%s", ft_itoa(10));
+	return 0;
+}
