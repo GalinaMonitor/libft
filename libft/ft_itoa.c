@@ -30,7 +30,14 @@ static int	ft_intlen(long n)
 	}
 	return (count);
 }
-
+/*
+**@brief			Itoa function after analysing - and 0
+**
+**@param			word
+**@param			ind
+**@param			n
+**@return			char*
+*/
 char	*ft_itoa_unsigned(char *word, int ind, long n)
 {
 	while (n > 0)
@@ -68,10 +75,4 @@ char	*ft_itoa(int nbr)
 		return (word);
 	}
 	return (ft_itoa_unsigned(word, ind, n));
-}
-
-int main()
-{
-	printf("%s", ft_itoa(10));
-	return 0;
 }
